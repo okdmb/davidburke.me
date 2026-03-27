@@ -1,4 +1,5 @@
 baseURL = 'https://davidburke.me/'
 locale = 'en-us'
 title = 'My New Hugo Project'
-theme = 'PaperMod'
+theme = 'Stack'
+# theme = 'PaperMod'
