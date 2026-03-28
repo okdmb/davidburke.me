@@ -1,0 +1,11 @@
+baseURL = 'https://davidburke.me/'
+languageCode = 'en-us'
+theme = 'Stack'
+defaultContentLanguage = 'en'
+
+[pagination]
+    pagerSize = 5
+
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"

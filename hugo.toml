@@ -1,5 +1,0 @@
-baseURL = 'https://davidburke.me/'
-locale = 'en-us'
-title = 'My New Hugo Project'
-theme = 'Stack'
-# theme = 'PaperMod'
