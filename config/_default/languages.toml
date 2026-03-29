@@ -1,7 +1,7 @@
 [en]
-    languageName = "English"
-    title        = "My New Hugo Project"
-    weight       = 1
+languageName = "English"
+title = "David Burke"
+weight = 1
 
-    [en.params.sidebar]
-        subtitle = "My New Hugo Project with Theme Stack"
+[en.params.sidebar]
+subtitle = "A place for my thoughts"
