@@ -4,7 +4,7 @@ date = 2026-04-19T22:12:44Z
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["Windows", "Inclusion", "Productivity"]
-image = "/img/accessibility/menu-mockup.svg"
+image = "/img/accessibility/banner.png"
 description = "A comprehensive guide on optimizing Windows for better vision, hearing, dexterity, and cognitive accessibility."
 +++
 

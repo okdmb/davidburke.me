@@ -13,10 +13,18 @@ The **Curb Cut Effect** is a powerful phenomenon in design where features origin
 
 In its simplest terms, the Curb Cut Effect describes how solving a problem for a specific group of people with high needs creates a better experience for everyone else. What starts as a specialized accommodation often becomes a mainstream convenience. 
 
-In the digital world, this translates to features like:
+In the digital world, this translates to several features we now take for granted:
+
 *   **Closed Captions:** Originally designed for the D/deaf and hard of hearing community, they are now used by millions of people in loud gyms, quiet libraries, or for language learning.
-*   **Voice Commands:** Initially developed for people with limited mobility, they now power millions of smart home devices and hands-free car interfaces.
-*   **Dark Mode:** Often used to reduce eye strain or help people with light sensitivity, it is now a standard aesthetic preference for many users.
+    ![Closed captions being used in a noisy public space](captions-example.jpg)
+*   **Voice Commands & Dictation:** Initially developed for people with limited mobility or dexterity, they now power Siri, Alexa, hands-free driving, and quick text-to-speech for busy multi-taskers.
+    ![A user interacting with a voice assistant on a smartphone](voice-assistant-example.jpg)
+*   **Dark Mode & High Contrast:** Often used to reduce eye strain or help people with light sensitivity, it is now a standard aesthetic preference and a battery-saving feature for OLED screens.
+    ![A mobile application interface shown in both Light and Dark mode side-by-side](dark-mode-comparison.jpg)
+*   **Autocorrect & Autocomplete:** What started as assisted typing for people with motor impairments is now essential for fast mobile typing and reducing typos for everyone.
+    ![Smartphone keyboard showing autocomplete suggestions while typing](autocomplete-example.jpg)
+*   **Audiobooks:** The "Talking Books" program was originally established for the blind in the 1930s. Today, it's a massive mainstream market for commuting, exercising, and multi-taskers.
+    ![A modern audiobook app interface showing a book cover and playback controls](audiobook-app.jpg)
 
 ## A Brief History
 
