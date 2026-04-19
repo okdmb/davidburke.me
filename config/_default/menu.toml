@@ -15,6 +15,14 @@ url = "https://twitter.com"
 icon = "brand-twitter"
 
 [[social]]
+identifier = "mail"
+name = "Email"
+url = "mailto:hello@davidb.cc"
+
+[social.params]
+icon = "mail"
+
+[[social]]
 identifier = "linkedin"
 name = "LinkedIn"
 url = "https://www.linkedin.com/in/davidburkesydney/"
