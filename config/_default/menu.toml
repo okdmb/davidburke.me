@@ -2,6 +2,7 @@
 identifier = "github"
 name = "GitHub"
 url = "https://github.com/okdmb/davidburke.me"
+weight = 1
 
 [social.params]
 icon = "brand-github"
@@ -10,6 +11,7 @@ icon = "brand-github"
 identifier = "linkedin"
 name = "LinkedIn"
 url = "https://www.linkedin.com/in/davidburkesydney/"
+weight = 2
 
 [social.params]
 icon = "brand-linkedin"
@@ -18,6 +20,7 @@ icon = "brand-linkedin"
 identifier = "mail"
 name = "Email"
 url = "mailto:hello@davidb.cc"
+weight = 3
 
 [social.params]
 icon = "mail"
@@ -26,6 +29,7 @@ icon = "mail"
 identifier = "twitter"
 name = "Twitter"
 url = "https://twitter.com"
+weight = 4
 
 [social.params]
 icon = "brand-twitter"
