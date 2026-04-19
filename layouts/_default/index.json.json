@@ -6,7 +6,8 @@
         "title": {{ $page.Title | jsonify }},
         "content": {{ $page.Plain | jsonify }},
         "permalink": {{ $page.Permalink | jsonify }},
-        "summary": {{ $page.Summary | jsonify }}
+        "summary": {{ $page.Summary | jsonify }},
+        "section": {{ $page.Section | jsonify }}
     }
 {{- end -}}
 ]
