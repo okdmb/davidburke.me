@@ -3,9 +3,6 @@ languageCode = 'en-us'
 theme = 'Stack'
 defaultContentLanguage = 'en'
 
-[outputs]
-    home = ["HTML", "RSS", "JSON"]
-
 [pagination]
     pagerSize = 5
 
