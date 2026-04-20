@@ -1,6 +1,6 @@
 +++
 title = "From Specialty to Standard: Niche Features Gone Mainstream"
-date = 2026-04-20T11:00:00Z
+date = 2026-04-20T03:00:00Z
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["Software", "UX", "Innovation"]
