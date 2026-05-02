@@ -9,7 +9,7 @@ favicon        = "img/avatar.png"
 
 [footer]
     since      = 2026
-    customText = ""
+    customText = "designed by <a href=\"https://jimmycai.com/\" target=\"_blank\" rel=\"noopener\">Jimmy</a>"
 
 [dateFormat]
     published   = ":date_full"
