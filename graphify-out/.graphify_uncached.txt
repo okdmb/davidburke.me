@@ -1,0 +1,28 @@
+/data/data/com.termux/files/home/hugo/davidburke.me/content/_index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/how-to-make-windows-more-accessible.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Image Gallery/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Markdown Syntax/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Math Typesetting/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/mermaid-diagrams/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/shortcodes/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/specialized-features-gone-mainstream/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/page/about/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/page/archives/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/page/links/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/page/search/index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/categories/Documentation/_index.md
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Image Gallery/florian-klauer-nptLmg6jqDo-unsplash.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Image Gallery/helena-hertz-wWZzXlDpMog-unsplash.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Image Gallery/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Image Gallery/luca-bravo-alS7ewQ41M8-unsplash.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/Markdown Syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/captions-example.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/voice-assistant-example.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/dark-mode-comparison.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/autocomplete-example.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/audiobook-app.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/captions-example.svg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/post/the-digital-curb-cut-effect/autocomplete-example.png
+/data/data/com.termux/files/home/hugo/davidburke.me/content/page/links/ts-logo-128.jpg
+/data/data/com.termux/files/home/hugo/davidburke.me/content/categories/Documentation/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg

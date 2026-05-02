@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>graphify - graphify-out/graph.html</title>
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f0f1a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; display: flex; height: 100vh; overflow: hidden; }
+  #graph { flex: 1; }
+  #sidebar { width: 280px; background: #1a1a2e; border-left: 1px solid #2a2a4e; display: flex; flex-direction: column; overflow: hidden; }
+  #search-wrap { padding: 12px; border-bottom: 1px solid #2a2a4e; }
+  #search { width: 100%; background: #0f0f1a; border: 1px solid #3a3a5e; color: #e0e0e0; padding: 7px 10px; border-radius: 6px; font-size: 13px; outline: none; }
+  #search:focus { border-color: #4E79A7; }
+  #search-results { max-height: 140px; overflow-y: auto; padding: 4px 12px; border-bottom: 1px solid #2a2a4e; display: none; }
+  .search-item { padding: 4px 6px; cursor: pointer; border-radius: 4px; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .search-item:hover { background: #2a2a4e; }
+  #info-panel { padding: 14px; border-bottom: 1px solid #2a2a4e; min-height: 140px; }
+  #info-panel h3 { font-size: 13px; color: #aaa; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+  #info-content { font-size: 13px; color: #ccc; line-height: 1.6; }
+  #info-content .field { margin-bottom: 5px; }
+  #info-content .field b { color: #e0e0e0; }
+  #info-content .empty { color: #555; font-style: italic; }
+  .neighbor-link { display: block; padding: 2px 6px; margin: 2px 0; border-radius: 3px; cursor: pointer; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-left: 3px solid #333; }
+  .neighbor-link:hover { background: #2a2a4e; }
+  #neighbors-list { max-height: 160px; overflow-y: auto; margin-top: 4px; }
+  #legend-wrap { flex: 1; overflow-y: auto; padding: 12px; }
+  #legend-wrap h3 { font-size: 13px; color: #aaa; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .legend-item { display: flex; align-items: center; gap: 8px; padding: 4px 0; cursor: pointer; border-radius: 4px; font-size: 12px; }
+  .legend-item:hover { background: #2a2a4e; padding-left: 4px; }
+  .legend-item.dimmed { opacity: 0.35; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .legend-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .legend-count { color: #666; font-size: 11px; }
+  #stats { padding: 10px 14px; border-top: 1px solid #2a2a4e; font-size: 11px; color: #555; }
+  #legend-controls { display: flex; gap: 6px; margin-bottom: 8px; }
+  #legend-controls button { flex: 1; background: #0f0f1a; border: 1px solid #3a3a5e; color: #aaa; padding: 4px 0; border-radius: 4px; font-size: 11px; cursor: pointer; }
+  #legend-controls button:hover { border-color: #4E79A7; color: #e0e0e0; }
+</style>
+</head>
+<body>
+<div id="graph"></div>
+<div id="sidebar">
+  <div id="search-wrap">
+    <input id="search" type="text" placeholder="Search nodes..." autocomplete="off">
+    <div id="search-results"></div>
+  </div>
+  <div id="info-panel">
+    <h3>Node Info</h3>
+    <div id="info-content"><span class="empty">Click a node to inspect it</span></div>
+  </div>
+  <div id="legend-wrap">
+    <h3>Communities</h3>
+    <div id="legend-controls">
+      <button onclick="toggleAllCommunities(false)">Show All</button>
+      <button onclick="toggleAllCommunities(true)">Hide All</button>
+    </div>
+    <div id="legend"></div>
+  </div>
+  <div id="stats">42 nodes &middot; 25 edges &middot; 17 communities</div>
+</div>
+<script>
+const RAW_NODES = [{"id": "concept_windows_accessibility", "label": "Windows Accessibility", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Windows Accessibility", "community": 1, "community_name": "Universal Design Concepts", "source_file": "content/post/how-to-make-windows-more-accessible.md", "file_type": "document", "degree": 1}, {"id": "concept_curb_cut_effect", "label": "Curb Cut Effect", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 32.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Curb Cut Effect", "community": 1, "community_name": "Universal Design Concepts", "source_file": "content/post/the-digital-curb-cut-effect/index.md", "file_type": "document", "degree": 3}, {"id": "concept_universal_design", "label": "Universal Design", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Universal Design", "community": 1, "community_name": "Universal Design Concepts", "source_file": "content/post/the-digital-curb-cut-effect/index.md", "file_type": "document", "degree": 1}, {"id": "concept_stack_theme", "label": "Stack Theme", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 40.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Stack Theme", "community": 0, "community_name": "Hugo Theme Features", "source_file": "content/post/Image Gallery/index.md", "file_type": "document", "degree": 4}, {"id": "concept_photoswipe", "label": "Photoswipe", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Photoswipe", "community": 0, "community_name": "Hugo Theme Features", "source_file": "content/post/Image Gallery/index.md", "file_type": "document", "degree": 1}, {"id": "concept_image_gallery", "label": "Image Gallery", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 25.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Image Gallery", "community": 0, "community_name": "Hugo Theme Features", "source_file": "content/post/Image Gallery/index.md", "file_type": "document", "degree": 2}, {"id": "concept_markdown_syntax", "label": "Markdown Syntax", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Markdown Syntax", "community": 2, "community_name": "Hugo Markdown Support", "source_file": "content/post/Markdown Syntax/index.md", "file_type": "document", "degree": 1}, {"id": "concept_hugo", "label": "Hugo", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Hugo", "community": 2, "community_name": "Hugo Markdown Support", "source_file": "content/post/Markdown Syntax/index.md", "file_type": "document", "degree": 1}, {"id": "concept_katex", "label": "KaTeX", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "KaTeX", "community": 0, "community_name": "Hugo Theme Features", "source_file": "content/post/Math Typesetting/index.md", "file_type": "document", "degree": 1}, {"id": "concept_mermaid", "label": "Mermaid", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Mermaid", "community": 0, "community_name": "Hugo Theme Features", "source_file": "content/post/mermaid-diagrams/index.md", "file_type": "document", "degree": 1}, {"id": "concept_shortcodes", "label": "Shortcodes", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Shortcodes", "community": 0, "community_name": "Hugo Theme Features", "source_file": "content/post/shortcodes/index.md", "file_type": "document", "degree": 1}, {"id": "concept_mainstream_features", "label": "Mainstream Features", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 32.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Mainstream Features", "community": 1, "community_name": "Universal Design Concepts", "source_file": "content/post/specialized-features-gone-mainstream/index.md", "file_type": "document", "degree": 3}, {"id": "concept_ocr", "label": "Optical Character Recognition (OCR)", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Optical Character Recognition (OCR)", "community": 1, "community_name": "Universal Design Concepts", "source_file": "content/post/specialized-features-gone-mainstream/index.md", "file_type": "document", "degree": 1}, {"id": "concept_sso", "label": "Single Sign-On (SSO)", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Single Sign-On (SSO)", "community": 1, "community_name": "Universal Design Concepts", "source_file": "content/post/specialized-features-gone-mainstream/index.md", "file_type": "document", "degree": 1}, {"id": "florian_vintage_typewriter", "label": "Vintage Typewriter Mechanism", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Vintage Typewriter Mechanism", "community": 3, "community_name": "Vintage Typewriter Mechanism", "source_file": "content/post/Image Gallery/florian-klauer-nptLmg6jqDo-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "florian_typebars", "label": "Typebars Striking", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Typebars Striking", "community": 3, "community_name": "Vintage Typewriter Mechanism", "source_file": "content/post/Image Gallery/florian-klauer-nptLmg6jqDo-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "helena_typewriter", "label": "Old Mechanical Typewriter", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Old Mechanical Typewriter", "community": 4, "community_name": "Mechanical Typewriter Keyboard", "source_file": "content/post/Image Gallery/helena-hertz-wWZzXlDpMog-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "helena_keyboard", "label": "Typewriter Keyboard", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Typewriter Keyboard", "community": 4, "community_name": "Mechanical Typewriter Keyboard", "source_file": "content/post/Image Gallery/helena-hertz-wWZzXlDpMog-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "hudai_person_writing", "label": "Person Writing in Notebook", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Person Writing in Notebook", "community": 5, "community_name": "Notebook Writing", "source_file": "content/post/Image Gallery/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "hudai_notebook", "label": "Small Notebook", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Small Notebook", "community": 5, "community_name": "Notebook Writing", "source_file": "content/post/Image Gallery/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "luca_typewriter_keys", "label": "Circular Typewriter Keys Close-up", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Circular Typewriter Keys Close-up", "community": 6, "community_name": "Vintage Tech Close-up", "source_file": "content/post/Image Gallery/luca-bravo-alS7ewQ41M8-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "luca_vintage_tech", "label": "Vintage Technology Theme", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Vintage Technology Theme", "community": 6, "community_name": "Vintage Tech Close-up", "source_file": "content/post/Image Gallery/luca-bravo-alS7ewQ41M8-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "pawel_abstract_geometry", "label": "Colorful Abstract Geometric Shapes", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Colorful Abstract Geometric Shapes", "community": 7, "community_name": "Abstract 3D Shapes", "source_file": "content/post/Markdown Syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "pawel_3d_render", "label": "3D Soft Lighting Render", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "3D Soft Lighting Render", "community": 7, "community_name": "Abstract 3D Shapes", "source_file": "content/post/Markdown Syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "captionsexample_ui", "label": "Video Player with Captions", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Video Player with Captions", "community": 8, "community_name": "Closed Captions Player", "source_file": "content/post/the-digital-curb-cut-effect/captions-example.jpg", "file_type": "image", "degree": 1}, {"id": "captionsexample_captions", "label": "Closed Captions", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Closed Captions", "community": 8, "community_name": "Closed Captions Player", "source_file": "content/post/the-digital-curb-cut-effect/captions-example.jpg", "file_type": "concept", "degree": 1}, {"id": "voiceassistantexample_ui", "label": "Voice Assistant Interface", "color": {"background": "#BAB0AC", "border": "#BAB0AC", "highlight": {"background": "#ffffff", "border": "#BAB0AC"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Voice Assistant Interface", "community": 9, "community_name": "Voice Assistant UI", "source_file": "content/post/the-digital-curb-cut-effect/voice-assistant-example.jpg", "file_type": "image", "degree": 1}, {"id": "voiceassistantexample_voice_recognition", "label": "Voice Recognition", "color": {"background": "#BAB0AC", "border": "#BAB0AC", "highlight": {"background": "#ffffff", "border": "#BAB0AC"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Voice Recognition", "community": 9, "community_name": "Voice Assistant UI", "source_file": "content/post/the-digital-curb-cut-effect/voice-assistant-example.jpg", "file_type": "concept", "degree": 1}, {"id": "darkmodecomparison_ui", "label": "Light and Dark Mode Split Screen", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Light and Dark Mode Split Screen", "community": 10, "community_name": "Dark Mode Interface", "source_file": "content/post/the-digital-curb-cut-effect/dark-mode-comparison.jpg", "file_type": "image", "degree": 1}, {"id": "darkmodecomparison_dark_mode", "label": "Dark Mode", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Dark Mode", "community": 10, "community_name": "Dark Mode Interface", "source_file": "content/post/the-digital-curb-cut-effect/dark-mode-comparison.jpg", "file_type": "concept", "degree": 1}, {"id": "autocompleteexample_ui", "label": "Search Autocomplete Dropdown", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Search Autocomplete Dropdown", "community": 11, "community_name": "Search Autocomplete", "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.jpg", "file_type": "image", "degree": 1}, {"id": "autocompleteexample_autocomplete", "label": "Autocomplete Suggestions", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Autocomplete Suggestions", "community": 11, "community_name": "Search Autocomplete", "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.jpg", "file_type": "concept", "degree": 1}, {"id": "audiobookapp_ui", "label": "Audiobook Player", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Audiobook Player", "community": 12, "community_name": "Audiobook Player", "source_file": "content/post/the-digital-curb-cut-effect/audiobook-app.jpg", "file_type": "image", "degree": 1}, {"id": "audiobookapp_audio_player", "label": "Audio Reading", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Audio Reading", "community": 12, "community_name": "Audiobook Player", "source_file": "content/post/the-digital-curb-cut-effect/audiobook-app.jpg", "file_type": "concept", "degree": 1}, {"id": "captionsexample_image", "label": "Captions Example Icon", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Captions Example Icon", "community": 13, "community_name": "Closed Captioning Icon", "source_file": "content/post/the-digital-curb-cut-effect/captions-example.svg", "file_type": "image", "degree": 1}, {"id": "captionsexample_concept", "label": "Closed Captioning", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Closed Captioning", "community": 13, "community_name": "Closed Captioning Icon", "source_file": "content/post/the-digital-curb-cut-effect/captions-example.svg", "file_type": "concept", "degree": 1}, {"id": "autocompleteexample_image", "label": "Autocomplete Example", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Autocomplete Example", "community": 14, "community_name": "AI Autocomplete UI", "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.png", "file_type": "image", "degree": 1}, {"id": "autocompleteexample_pattern", "label": "AI Autocomplete UI", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "AI Autocomplete UI", "community": 14, "community_name": "AI Autocomplete UI", "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.png", "file_type": "ui_pattern", "degree": 1}, {"id": "tslogo128_image", "label": "TS Logo", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "TS Logo", "community": 15, "community_name": "TypeScript Logo", "source_file": "content/page/links/ts-logo-128.jpg", "file_type": "image", "degree": 1}, {"id": "tslogo128_tech", "label": "TypeScript", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "TypeScript", "community": 15, "community_name": "TypeScript Logo", "source_file": "content/page/links/ts-logo-128.jpg", "file_type": "technology", "degree": 1}, {"id": "hutomoabrianto_image", "label": "Laptop Typing Photo", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Laptop Typing Photo", "community": 16, "community_name": "Laptop Typing Theme", "source_file": "content/categories/Documentation/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg", "file_type": "image", "degree": 1}, {"id": "hutomoabrianto_theme", "label": "Programming and Documentation", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 17.5, "font": {"size": 12, "color": "#ffffff"}, "title": "Programming and Documentation", "community": 16, "community_name": "Laptop Typing Theme", "source_file": "content/categories/Documentation/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg", "file_type": "theme", "degree": 1}];
+const RAW_EDGES = [{"from": "concept_windows_accessibility", "to": "concept_curb_cut_effect", "label": "relates_to", "title": "relates_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_curb_cut_effect", "to": "concept_universal_design", "label": "core_argument_for", "title": "core_argument_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_curb_cut_effect", "to": "concept_mainstream_features", "label": "relates_to", "title": "relates_to [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "concept_stack_theme", "to": "concept_image_gallery", "label": "supports", "title": "supports [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_stack_theme", "to": "concept_katex", "label": "supports", "title": "supports [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_stack_theme", "to": "concept_mermaid", "label": "supports", "title": "supports [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_stack_theme", "to": "concept_shortcodes", "label": "supports", "title": "supports [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_photoswipe", "to": "concept_image_gallery", "label": "powered_by", "title": "powered_by [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_markdown_syntax", "to": "concept_hugo", "label": "supports", "title": "supports [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_mainstream_features", "to": "concept_ocr", "label": "includes", "title": "includes [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_mainstream_features", "to": "concept_sso", "label": "includes", "title": "includes [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "florian_vintage_typewriter", "to": "florian_typebars", "label": "features", "title": "features [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "helena_typewriter", "to": "helena_keyboard", "label": "has_component", "title": "has_component [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "hudai_person_writing", "to": "hudai_notebook", "label": "uses", "title": "uses [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "luca_typewriter_keys", "to": "luca_vintage_tech", "label": "represents", "title": "represents [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "pawel_abstract_geometry", "to": "pawel_3d_render", "label": "is_a", "title": "is_a [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "captionsexample_ui", "to": "captionsexample_captions", "label": "demonstrates", "title": "demonstrates [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "voiceassistantexample_ui", "to": "voiceassistantexample_voice_recognition", "label": "demonstrates", "title": "demonstrates [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "darkmodecomparison_ui", "to": "darkmodecomparison_dark_mode", "label": "demonstrates", "title": "demonstrates [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "autocompleteexample_ui", "to": "autocompleteexample_autocomplete", "label": "demonstrates", "title": "demonstrates [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "audiobookapp_ui", "to": "audiobookapp_audio_player", "label": "demonstrates", "title": "demonstrates [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "captionsexample_image", "to": "captionsexample_concept", "label": "represents", "title": "represents [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "autocompleteexample_image", "to": "autocompleteexample_pattern", "label": "shows_ui_pattern", "title": "shows_ui_pattern [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "tslogo128_image", "to": "tslogo128_tech", "label": "represents", "title": "represents [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "hutomoabrianto_image", "to": "hutomoabrianto_theme", "label": "depicts_theme", "title": "depicts_theme [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}];
+const LEGEND = [{"cid": 0, "color": "#4E79A7", "label": "Hugo Theme Features", "count": 6}, {"cid": 1, "color": "#F28E2B", "label": "Universal Design Concepts", "count": 6}, {"cid": 2, "color": "#E15759", "label": "Hugo Markdown Support", "count": 2}, {"cid": 3, "color": "#76B7B2", "label": "Vintage Typewriter Mechanism", "count": 2}, {"cid": 4, "color": "#59A14F", "label": "Mechanical Typewriter Keyboard", "count": 2}, {"cid": 5, "color": "#EDC948", "label": "Notebook Writing", "count": 2}, {"cid": 6, "color": "#B07AA1", "label": "Vintage Tech Close-up", "count": 2}, {"cid": 7, "color": "#FF9DA7", "label": "Abstract 3D Shapes", "count": 2}, {"cid": 8, "color": "#9C755F", "label": "Closed Captions Player", "count": 2}, {"cid": 9, "color": "#BAB0AC", "label": "Voice Assistant UI", "count": 2}, {"cid": 10, "color": "#4E79A7", "label": "Dark Mode Interface", "count": 2}, {"cid": 11, "color": "#F28E2B", "label": "Search Autocomplete", "count": 2}, {"cid": 12, "color": "#E15759", "label": "Audiobook Player", "count": 2}, {"cid": 13, "color": "#76B7B2", "label": "Closed Captioning Icon", "count": 2}, {"cid": 14, "color": "#59A14F", "label": "AI Autocomplete UI", "count": 2}, {"cid": 15, "color": "#EDC948", "label": "TypeScript Logo", "count": 2}, {"cid": 16, "color": "#B07AA1", "label": "Laptop Typing Theme", "count": 2}];
+
+// HTML-escape helper — prevents XSS when injecting graph data into innerHTML
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// Build vis datasets
+const nodesDS = new vis.DataSet(RAW_NODES.map(n => ({
+  id: n.id, label: n.label, color: n.color, size: n.size,
+  font: n.font, title: n.title,
+  _community: n.community, _community_name: n.community_name,
+  _source_file: n.source_file, _file_type: n.file_type, _degree: n.degree,
+})));
+
+const edgesDS = new vis.DataSet(RAW_EDGES.map((e, i) => ({
+  id: i, from: e.from, to: e.to,
+  label: '',
+  title: e.title,
+  dashes: e.dashes,
+  width: e.width,
+  color: e.color,
+  arrows: { to: { enabled: true, scaleFactor: 0.5 } },
+})));
+
+const container = document.getElementById('graph');
+const network = new vis.Network(container, { nodes: nodesDS, edges: edgesDS }, {
+  physics: {
+    enabled: true,
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -60,
+      centralGravity: 0.005,
+      springLength: 120,
+      springConstant: 0.08,
+      damping: 0.4,
+      avoidOverlap: 0.8,
+    },
+    stabilization: { iterations: 200, fit: true },
+  },
+  interaction: {
+    hover: true,
+    tooltipDelay: 100,
+    hideEdgesOnDrag: true,
+    navigationButtons: false,
+    keyboard: false,
+  },
+  nodes: { shape: 'dot', borderWidth: 1.5 },
+  edges: { smooth: { type: 'continuous', roundness: 0.2 }, selectionWidth: 3 },
+});
+
+network.once('stabilizationIterationsDone', () => {
+  network.setOptions({ physics: { enabled: false } });
+});
+
+function showInfo(nodeId) {
+  const n = nodesDS.get(nodeId);
+  if (!n) return;
+  const neighborIds = network.getConnectedNodes(nodeId);
+  const neighborItems = neighborIds.map(nid => {
+    const nb = nodesDS.get(nid);
+    const color = nb ? nb.color.background : '#555';
+    return `<span class="neighbor-link" style="border-left-color:${esc(color)}" onclick="focusNode(${JSON.stringify(nid)})">${esc(nb ? nb.label : nid)}</span>`;
+  }).join('');
+  document.getElementById('info-content').innerHTML = `
+    <div class="field"><b>${esc(n.label)}</b></div>
+    <div class="field">Type: ${esc(n._file_type || 'unknown')}</div>
+    <div class="field">Community: ${esc(n._community_name)}</div>
+    <div class="field">Source: ${esc(n._source_file || '-')}</div>
+    <div class="field">Degree: ${n._degree}</div>
+    ${neighborIds.length ? `<div class="field" style="margin-top:8px;color:#aaa;font-size:11px">Neighbors (${neighborIds.length})</div><div id="neighbors-list">${neighborItems}</div>` : ''}
+  `;
+}
+
+function focusNode(nodeId) {
+  network.focus(nodeId, { scale: 1.4, animation: true });
+  network.selectNodes([nodeId]);
+  showInfo(nodeId);
+}
+
+// Track hovered node — hover detection is more reliable than click params
+let hoveredNodeId = null;
+network.on('hoverNode', params => {
+  hoveredNodeId = params.node;
+  container.style.cursor = 'pointer';
+});
+network.on('blurNode', () => {
+  hoveredNodeId = null;
+  container.style.cursor = 'default';
+});
+container.addEventListener('click', () => {
+  if (hoveredNodeId !== null) {
+    showInfo(hoveredNodeId);
+    network.selectNodes([hoveredNodeId]);
+  }
+});
+network.on('click', params => {
+  if (params.nodes.length > 0) {
+    showInfo(params.nodes[0]);
+  } else if (hoveredNodeId === null) {
+    document.getElementById('info-content').innerHTML = '<span class="empty">Click a node to inspect it</span>';
+  }
+});
+
+const searchInput = document.getElementById('search');
+const searchResults = document.getElementById('search-results');
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.toLowerCase().trim();
+  searchResults.innerHTML = '';
+  if (!q) { searchResults.style.display = 'none'; return; }
+  const matches = RAW_NODES.filter(n => n.label.toLowerCase().includes(q)).slice(0, 20);
+  if (!matches.length) { searchResults.style.display = 'none'; return; }
+  searchResults.style.display = 'block';
+  matches.forEach(n => {
+    const el = document.createElement('div');
+    el.className = 'search-item';
+    el.textContent = n.label;
+    el.style.borderLeft = `3px solid ${n.color.background}`;
+    el.style.paddingLeft = '8px';
+    el.onclick = () => {
+      network.focus(n.id, { scale: 1.5, animation: true });
+      network.selectNodes([n.id]);
+      showInfo(n.id);
+      searchResults.style.display = 'none';
+      searchInput.value = '';
+    };
+    searchResults.appendChild(el);
+  });
+});
+document.addEventListener('click', e => {
+  if (!searchResults.contains(e.target) && e.target !== searchInput)
+    searchResults.style.display = 'none';
+});
+
+const hiddenCommunities = new Set();
+
+function toggleAllCommunities(hide) {
+  document.querySelectorAll('.legend-item').forEach(item => {
+    hide ? item.classList.add('dimmed') : item.classList.remove('dimmed');
+  });
+  LEGEND.forEach(c => {
+    if (hide) hiddenCommunities.add(c.cid); else hiddenCommunities.delete(c.cid);
+  });
+  const updates = RAW_NODES.map(n => ({ id: n.id, hidden: hide }));
+  nodesDS.update(updates);
+}
+
+const legendEl = document.getElementById('legend');
+LEGEND.forEach(c => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<div class="legend-dot" style="background:${c.color}"></div>
+    <span class="legend-label">${c.label}</span>
+    <span class="legend-count">${c.count}</span>`;
+  item.onclick = () => {
+    if (hiddenCommunities.has(c.cid)) {
+      hiddenCommunities.delete(c.cid);
+      item.classList.remove('dimmed');
+    } else {
+      hiddenCommunities.add(c.cid);
+      item.classList.add('dimmed');
+    }
+    const updates = RAW_NODES
+      .filter(n => n.community === c.cid)
+      .map(n => ({ id: n.id, hidden: hiddenCommunities.has(c.cid) }));
+    nodesDS.update(updates);
+  };
+  legendEl.appendChild(item);
+});
+</script>
+<script>
+// Render hyperedges as shaded regions
+const hyperedges = [];
+// afterDrawing passes ctx already transformed to network coordinate space.
+// Draw node positions raw — no manual pan/zoom/DPR math needed.
+network.on('afterDrawing', function(ctx) {
+    hyperedges.forEach(h => {
+        const positions = h.nodes
+            .map(nid => network.getPositions([nid])[nid])
+            .filter(p => p !== undefined);
+        if (positions.length < 2) return;
+        ctx.save();
+        ctx.globalAlpha = 0.12;
+        ctx.fillStyle = '#6366f1';
+        ctx.strokeStyle = '#6366f1';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        // Centroid and expanded hull in network coordinates
+        const cx = positions.reduce((s, p) => s + p.x, 0) / positions.length;
+        const cy = positions.reduce((s, p) => s + p.y, 0) / positions.length;
+        const expanded = positions.map(p => ({
+            x: cx + (p.x - cx) * 1.15,
+            y: cy + (p.y - cy) * 1.15
+        }));
+        ctx.moveTo(expanded[0].x, expanded[0].y);
+        expanded.slice(1).forEach(p => ctx.lineTo(p.x, p.y));
+        ctx.closePath();
+        ctx.fill();
+        ctx.globalAlpha = 0.4;
+        ctx.stroke();
+        // Label
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = '#4f46e5';
+        ctx.font = 'bold 11px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(h.label, cx, cy - 5);
+        ctx.restore();
+    });
+});
+</script>
+</body>
+</html>

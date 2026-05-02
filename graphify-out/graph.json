@@ -1,0 +1,690 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "Windows Accessibility",
+      "file_type": "document",
+      "source_file": "content/post/how-to-make-windows-more-accessible.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Centralized hub providing essential tools for vision, hearing, dexterity, and cognitive needs.",
+      "id": "concept_windows_accessibility",
+      "community": 1,
+      "norm_label": "windows accessibility"
+    },
+    {
+      "label": "Curb Cut Effect",
+      "file_type": "document",
+      "source_file": "content/post/the-digital-curb-cut-effect/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "A powerful phenomenon in design where features originally intended to assist people with disabilities end up providing significant benefits to the entire population.",
+      "id": "concept_curb_cut_effect",
+      "community": 1,
+      "norm_label": "curb cut effect"
+    },
+    {
+      "label": "Universal Design",
+      "file_type": "document",
+      "source_file": "content/post/the-digital-curb-cut-effect/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_universal_design",
+      "community": 1,
+      "norm_label": "universal design"
+    },
+    {
+      "label": "Stack Theme",
+      "file_type": "document",
+      "source_file": "content/post/Image Gallery/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_stack_theme",
+      "community": 0,
+      "norm_label": "stack theme"
+    },
+    {
+      "label": "Photoswipe",
+      "file_type": "document",
+      "source_file": "content/post/Image Gallery/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_photoswipe",
+      "community": 0,
+      "norm_label": "photoswipe"
+    },
+    {
+      "label": "Image Gallery",
+      "file_type": "document",
+      "source_file": "content/post/Image Gallery/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_image_gallery",
+      "community": 0,
+      "norm_label": "image gallery"
+    },
+    {
+      "label": "Markdown Syntax",
+      "file_type": "document",
+      "source_file": "content/post/Markdown Syntax/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_markdown_syntax",
+      "community": 2,
+      "norm_label": "markdown syntax"
+    },
+    {
+      "label": "Hugo",
+      "file_type": "document",
+      "source_file": "content/post/Markdown Syntax/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_hugo",
+      "community": 2,
+      "norm_label": "hugo"
+    },
+    {
+      "label": "KaTeX",
+      "file_type": "document",
+      "source_file": "content/post/Math Typesetting/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_katex",
+      "community": 0,
+      "norm_label": "katex"
+    },
+    {
+      "label": "Mermaid",
+      "file_type": "document",
+      "source_file": "content/post/mermaid-diagrams/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_mermaid",
+      "community": 0,
+      "norm_label": "mermaid"
+    },
+    {
+      "label": "Shortcodes",
+      "file_type": "document",
+      "source_file": "content/post/shortcodes/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_shortcodes",
+      "community": 0,
+      "norm_label": "shortcodes"
+    },
+    {
+      "label": "Mainstream Features",
+      "file_type": "document",
+      "source_file": "content/post/specialized-features-gone-mainstream/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_mainstream_features",
+      "community": 1,
+      "norm_label": "mainstream features"
+    },
+    {
+      "label": "Optical Character Recognition (OCR)",
+      "file_type": "document",
+      "source_file": "content/post/specialized-features-gone-mainstream/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_ocr",
+      "community": 1,
+      "norm_label": "optical character recognition (ocr)"
+    },
+    {
+      "label": "Single Sign-On (SSO)",
+      "file_type": "document",
+      "source_file": "content/post/specialized-features-gone-mainstream/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_sso",
+      "community": 1,
+      "norm_label": "single sign-on (sso)"
+    },
+    {
+      "label": "Vintage Typewriter Mechanism",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/florian-klauer-nptLmg6jqDo-unsplash.jpg",
+      "id": "florian_vintage_typewriter",
+      "community": 3,
+      "norm_label": "vintage typewriter mechanism"
+    },
+    {
+      "label": "Typebars Striking",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/florian-klauer-nptLmg6jqDo-unsplash.jpg",
+      "id": "florian_typebars",
+      "community": 3,
+      "norm_label": "typebars striking"
+    },
+    {
+      "label": "Old Mechanical Typewriter",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/helena-hertz-wWZzXlDpMog-unsplash.jpg",
+      "id": "helena_typewriter",
+      "community": 4,
+      "norm_label": "old mechanical typewriter"
+    },
+    {
+      "label": "Typewriter Keyboard",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/helena-hertz-wWZzXlDpMog-unsplash.jpg",
+      "id": "helena_keyboard",
+      "community": 4,
+      "norm_label": "typewriter keyboard"
+    },
+    {
+      "label": "Person Writing in Notebook",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg",
+      "id": "hudai_person_writing",
+      "community": 5,
+      "norm_label": "person writing in notebook"
+    },
+    {
+      "label": "Small Notebook",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg",
+      "id": "hudai_notebook",
+      "community": 5,
+      "norm_label": "small notebook"
+    },
+    {
+      "label": "Circular Typewriter Keys Close-up",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/luca-bravo-alS7ewQ41M8-unsplash.jpg",
+      "id": "luca_typewriter_keys",
+      "community": 6,
+      "norm_label": "circular typewriter keys close-up"
+    },
+    {
+      "label": "Vintage Technology Theme",
+      "file_type": "image",
+      "source_file": "content/post/Image Gallery/luca-bravo-alS7ewQ41M8-unsplash.jpg",
+      "id": "luca_vintage_tech",
+      "community": 6,
+      "norm_label": "vintage technology theme"
+    },
+    {
+      "label": "Colorful Abstract Geometric Shapes",
+      "file_type": "image",
+      "source_file": "content/post/Markdown Syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg",
+      "id": "pawel_abstract_geometry",
+      "community": 7,
+      "norm_label": "colorful abstract geometric shapes"
+    },
+    {
+      "label": "3D Soft Lighting Render",
+      "file_type": "image",
+      "source_file": "content/post/Markdown Syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg",
+      "id": "pawel_3d_render",
+      "community": 7,
+      "norm_label": "3d soft lighting render"
+    },
+    {
+      "label": "Video Player with Captions",
+      "file_type": "image",
+      "source_file": "content/post/the-digital-curb-cut-effect/captions-example.jpg",
+      "id": "captionsexample_ui",
+      "community": 8,
+      "norm_label": "video player with captions"
+    },
+    {
+      "label": "Closed Captions",
+      "file_type": "concept",
+      "source_file": "content/post/the-digital-curb-cut-effect/captions-example.jpg",
+      "id": "captionsexample_captions",
+      "community": 8,
+      "norm_label": "closed captions"
+    },
+    {
+      "label": "Voice Assistant Interface",
+      "file_type": "image",
+      "source_file": "content/post/the-digital-curb-cut-effect/voice-assistant-example.jpg",
+      "id": "voiceassistantexample_ui",
+      "community": 9,
+      "norm_label": "voice assistant interface"
+    },
+    {
+      "label": "Voice Recognition",
+      "file_type": "concept",
+      "source_file": "content/post/the-digital-curb-cut-effect/voice-assistant-example.jpg",
+      "id": "voiceassistantexample_voice_recognition",
+      "community": 9,
+      "norm_label": "voice recognition"
+    },
+    {
+      "label": "Light and Dark Mode Split Screen",
+      "file_type": "image",
+      "source_file": "content/post/the-digital-curb-cut-effect/dark-mode-comparison.jpg",
+      "id": "darkmodecomparison_ui",
+      "community": 10,
+      "norm_label": "light and dark mode split screen"
+    },
+    {
+      "label": "Dark Mode",
+      "file_type": "concept",
+      "source_file": "content/post/the-digital-curb-cut-effect/dark-mode-comparison.jpg",
+      "id": "darkmodecomparison_dark_mode",
+      "community": 10,
+      "norm_label": "dark mode"
+    },
+    {
+      "label": "Search Autocomplete Dropdown",
+      "file_type": "image",
+      "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.jpg",
+      "id": "autocompleteexample_ui",
+      "community": 11,
+      "norm_label": "search autocomplete dropdown"
+    },
+    {
+      "label": "Autocomplete Suggestions",
+      "file_type": "concept",
+      "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.jpg",
+      "id": "autocompleteexample_autocomplete",
+      "community": 11,
+      "norm_label": "autocomplete suggestions"
+    },
+    {
+      "label": "Audiobook Player",
+      "file_type": "image",
+      "source_file": "content/post/the-digital-curb-cut-effect/audiobook-app.jpg",
+      "id": "audiobookapp_ui",
+      "community": 12,
+      "norm_label": "audiobook player"
+    },
+    {
+      "label": "Audio Reading",
+      "file_type": "concept",
+      "source_file": "content/post/the-digital-curb-cut-effect/audiobook-app.jpg",
+      "id": "audiobookapp_audio_player",
+      "community": 12,
+      "norm_label": "audio reading"
+    },
+    {
+      "label": "Captions Example Icon",
+      "file_type": "image",
+      "source_file": "content/post/the-digital-curb-cut-effect/captions-example.svg",
+      "id": "captionsexample_image",
+      "community": 13,
+      "norm_label": "captions example icon"
+    },
+    {
+      "label": "Closed Captioning",
+      "file_type": "concept",
+      "source_file": "content/post/the-digital-curb-cut-effect/captions-example.svg",
+      "id": "captionsexample_concept",
+      "community": 13,
+      "norm_label": "closed captioning"
+    },
+    {
+      "label": "Autocomplete Example",
+      "file_type": "image",
+      "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.png",
+      "id": "autocompleteexample_image",
+      "community": 14,
+      "norm_label": "autocomplete example"
+    },
+    {
+      "label": "AI Autocomplete UI",
+      "file_type": "ui_pattern",
+      "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.png",
+      "id": "autocompleteexample_pattern",
+      "community": 14,
+      "norm_label": "ai autocomplete ui"
+    },
+    {
+      "label": "TS Logo",
+      "file_type": "image",
+      "source_file": "content/page/links/ts-logo-128.jpg",
+      "id": "tslogo128_image",
+      "community": 15,
+      "norm_label": "ts logo"
+    },
+    {
+      "label": "TypeScript",
+      "file_type": "technology",
+      "source_file": "content/page/links/ts-logo-128.jpg",
+      "id": "tslogo128_tech",
+      "community": 15,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "Laptop Typing Photo",
+      "file_type": "image",
+      "source_file": "content/categories/Documentation/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg",
+      "id": "hutomoabrianto_image",
+      "community": 16,
+      "norm_label": "laptop typing photo"
+    },
+    {
+      "label": "Programming and Documentation",
+      "file_type": "theme",
+      "source_file": "content/categories/Documentation/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg",
+      "id": "hutomoabrianto_theme",
+      "community": 16,
+      "norm_label": "programming and documentation"
+    }
+  ],
+  "links": [
+    {
+      "relation": "relates_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/how-to-make-windows-more-accessible.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_windows_accessibility",
+      "_tgt": "concept_curb_cut_effect",
+      "source": "concept_windows_accessibility",
+      "target": "concept_curb_cut_effect"
+    },
+    {
+      "relation": "core_argument_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/the-digital-curb-cut-effect/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_curb_cut_effect",
+      "_tgt": "concept_universal_design",
+      "source": "concept_curb_cut_effect",
+      "target": "concept_universal_design"
+    },
+    {
+      "relation": "relates_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "content/post/specialized-features-gone-mainstream/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_curb_cut_effect",
+      "_tgt": "concept_mainstream_features",
+      "source": "concept_curb_cut_effect",
+      "target": "concept_mainstream_features"
+    },
+    {
+      "relation": "supports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/Image Gallery/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_stack_theme",
+      "_tgt": "concept_image_gallery",
+      "source": "concept_stack_theme",
+      "target": "concept_image_gallery"
+    },
+    {
+      "relation": "supports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/Math Typesetting/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_stack_theme",
+      "_tgt": "concept_katex",
+      "source": "concept_stack_theme",
+      "target": "concept_katex"
+    },
+    {
+      "relation": "supports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/mermaid-diagrams/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_stack_theme",
+      "_tgt": "concept_mermaid",
+      "source": "concept_stack_theme",
+      "target": "concept_mermaid"
+    },
+    {
+      "relation": "supports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/shortcodes/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_stack_theme",
+      "_tgt": "concept_shortcodes",
+      "source": "concept_stack_theme",
+      "target": "concept_shortcodes"
+    },
+    {
+      "relation": "powered_by",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/Image Gallery/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_image_gallery",
+      "_tgt": "concept_photoswipe",
+      "source": "concept_photoswipe",
+      "target": "concept_image_gallery"
+    },
+    {
+      "relation": "supports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/Markdown Syntax/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_hugo",
+      "_tgt": "concept_markdown_syntax",
+      "source": "concept_markdown_syntax",
+      "target": "concept_hugo"
+    },
+    {
+      "relation": "includes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/specialized-features-gone-mainstream/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_mainstream_features",
+      "_tgt": "concept_ocr",
+      "source": "concept_mainstream_features",
+      "target": "concept_ocr"
+    },
+    {
+      "relation": "includes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/specialized-features-gone-mainstream/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "concept_mainstream_features",
+      "_tgt": "concept_sso",
+      "source": "concept_mainstream_features",
+      "target": "concept_sso"
+    },
+    {
+      "relation": "features",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "content/post/Image Gallery/florian-klauer-nptLmg6jqDo-unsplash.jpg",
+      "_src": "florian_vintage_typewriter",
+      "_tgt": "florian_typebars",
+      "source": "florian_vintage_typewriter",
+      "target": "florian_typebars"
+    },
+    {
+      "relation": "has_component",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "content/post/Image Gallery/helena-hertz-wWZzXlDpMog-unsplash.jpg",
+      "_src": "helena_typewriter",
+      "_tgt": "helena_keyboard",
+      "source": "helena_typewriter",
+      "target": "helena_keyboard"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "content/post/Image Gallery/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg",
+      "_src": "hudai_person_writing",
+      "_tgt": "hudai_notebook",
+      "source": "hudai_person_writing",
+      "target": "hudai_notebook"
+    },
+    {
+      "relation": "represents",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "content/post/Image Gallery/luca-bravo-alS7ewQ41M8-unsplash.jpg",
+      "_src": "luca_typewriter_keys",
+      "_tgt": "luca_vintage_tech",
+      "source": "luca_typewriter_keys",
+      "target": "luca_vintage_tech"
+    },
+    {
+      "relation": "is_a",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "content/post/Markdown Syntax/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg",
+      "_src": "pawel_abstract_geometry",
+      "_tgt": "pawel_3d_render",
+      "source": "pawel_abstract_geometry",
+      "target": "pawel_3d_render"
+    },
+    {
+      "relation": "demonstrates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "content/post/the-digital-curb-cut-effect/captions-example.jpg",
+      "_src": "captionsexample_ui",
+      "_tgt": "captionsexample_captions",
+      "source": "captionsexample_ui",
+      "target": "captionsexample_captions"
+    },
+    {
+      "relation": "demonstrates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "content/post/the-digital-curb-cut-effect/voice-assistant-example.jpg",
+      "_src": "voiceassistantexample_ui",
+      "_tgt": "voiceassistantexample_voice_recognition",
+      "source": "voiceassistantexample_ui",
+      "target": "voiceassistantexample_voice_recognition"
+    },
+    {
+      "relation": "demonstrates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "content/post/the-digital-curb-cut-effect/dark-mode-comparison.jpg",
+      "_src": "darkmodecomparison_ui",
+      "_tgt": "darkmodecomparison_dark_mode",
+      "source": "darkmodecomparison_ui",
+      "target": "darkmodecomparison_dark_mode"
+    },
+    {
+      "relation": "demonstrates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.jpg",
+      "_src": "autocompleteexample_ui",
+      "_tgt": "autocompleteexample_autocomplete",
+      "source": "autocompleteexample_ui",
+      "target": "autocompleteexample_autocomplete"
+    },
+    {
+      "relation": "demonstrates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "content/post/the-digital-curb-cut-effect/audiobook-app.jpg",
+      "_src": "audiobookapp_ui",
+      "_tgt": "audiobookapp_audio_player",
+      "source": "audiobookapp_ui",
+      "target": "audiobookapp_audio_player"
+    },
+    {
+      "relation": "represents",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "content/post/the-digital-curb-cut-effect/captions-example.svg",
+      "_src": "captionsexample_image",
+      "_tgt": "captionsexample_concept",
+      "source": "captionsexample_image",
+      "target": "captionsexample_concept"
+    },
+    {
+      "relation": "shows_ui_pattern",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/post/the-digital-curb-cut-effect/autocomplete-example.png",
+      "_src": "autocompleteexample_image",
+      "_tgt": "autocompleteexample_pattern",
+      "source": "autocompleteexample_image",
+      "target": "autocompleteexample_pattern"
+    },
+    {
+      "relation": "represents",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "content/page/links/ts-logo-128.jpg",
+      "_src": "tslogo128_image",
+      "_tgt": "tslogo128_tech",
+      "source": "tslogo128_image",
+      "target": "tslogo128_tech"
+    },
+    {
+      "relation": "depicts_theme",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "content/categories/Documentation/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg",
+      "_src": "hutomoabrianto_image",
+      "_tgt": "hutomoabrianto_theme",
+      "source": "hutomoabrianto_image",
+      "target": "hutomoabrianto_theme"
+    }
+  ],
+  "hyperedges": []
+}

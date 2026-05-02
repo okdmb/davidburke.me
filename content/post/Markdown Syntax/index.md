@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Markdown Syntax Guide
 date: 2026-01-25
 description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.

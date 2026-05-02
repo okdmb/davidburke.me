@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Math Typesetting
 date: 2026-01-24
 description: Guide to enabling and using KaTeX in the Stack theme
