@@ -38,4 +38,6 @@ To develop or build the site locally, you need to have Hugo installed (the Exten
 *   **Front Matter:** Files use YAML or TOML front matter for metadata (title, date, categories, tags).
 *   **Drafts as References:** Select reference documentation (like Math Typesetting, Mermaid Diagrams) are kept in the `content/post/` directory but marked with `draft: true` so they don't deploy to the production site but can be viewed locally.
 *   **Language:** The content directory is English-only (all non-English `.ja.md` and `.zh.md` files have been removed).
+*   **Footer Credits:** The "designed by" footer credit is overridden in the local `i18n/en.toml` file to point to Jimmy's website.
+*   **Footer and Pagination Overrides:** The copyright section in the footer and the pagination nav are hidden by overriding the respective partials in the local `layouts/partials/` directory.
 *   **Deployment:** The `main` branch acts as the production branch. Pushing to `main` automatically triggers the GitHub Actions workflow to build and deploy the site.
