@@ -7,31 +7,31 @@ tags = ["Neurodiversity", "Focus", "CognitiveAccessibility", "UX"]
 description = "Digital accessibility isn't just about vision and hearing—it's also about cognitive focus. Let's look at how OS tools manage digital distractions."
 +++
 
-When the tech industry discusses accessibility, the focus almost invariably defaults to physical accommodations: screen readers for the blind, captions for the deaf, and switch controls for those with motor impairments. However, an equally critical, yet frequently overlooked, pillar of accessibility is **cognitive focus**.
+Discussions about accessibility in tech often center on physical accommodations: screen readers for blind users, captions for deaf users, and switch controls for motor impairments. Yet **cognitive focus** is just as important.
 
-Navigating the modern digital environment requires immense cognitive load. Autoplaying videos, flashing notification badges, complex navigation menus, and constant pop-ups create a hostile environment for individuals with ADHD, autism, dyslexia, or sensory processing disorders. 
+Modern digital environments can be overwhelming. Autoplaying videos, flashing notification badges, complex menus, and pop-ups make navigation difficult for people with ADHD, autism, dyslexia, or sensory processing disorders. 
 
-Fortunately, both OS developers and web designers are beginning to implement features that allow users to strip away the noise and reclaim their focus.
+Operating system developers and web designers are increasingly adding features to help users remove distractions and improve focus.
 
 ### Taming the OS: Focus Sessions and Visual Effects
 
-Windows 11 includes several built-in tools designed specifically to reduce cognitive overload and prevent digital burnout.
+Windows 11 includes several built-in tools designed to reduce distractions and prevent digital burnout.
 
-*   **Focus Sessions:** Integrated into the Alarms & Clock app (and accessible directly from the taskbar calendar), Focus Sessions allow a user to set a timer for deep work. Crucially, starting a session automatically turns on "Do Not Disturb" (silencing all notifications) and turns off taskbar badges (the little red notification numbers on app icons that demand your attention). 
-*   **Disabling Animations:** For individuals with motion sensitivity (which can trigger vertigo or nausea) or those who find movement highly distracting, Windows allows users to disable transparency effects and UI animations via **Settings > Accessibility > Visual effects**. This creates a stark, stable, and predictable visual environment.
+*   **Focus Sessions:** Available in the Alarms & Clock app or the taskbar calendar, Focus Sessions let users set timers for uninterrupted work. Starting a session automatically enables "Do Not Disturb" to silence notifications and turns off notification badges on taskbar icons.
+*   **Disabling Animations:** For people with motion sensitivity or who find movement distracting, Windows offers an option to disable transparency effects and UI animations. Users can find this under **Settings > Accessibility > Visual effects**. This provides a simpler, more stable visual experience.
 
 ### The Web: Microsoft Edge's Immersive Reader
 
-The open web is notoriously hostile to cognitive focus. Articles are frequently interrupted by auto-playing video ads, shifting sidebars, and confusing typography.
+The web is full of distractions. Articles are often interrupted by auto-playing video ads, moving sidebars, and confusing typography.
 
-To combat this, modern browsers have introduced reading modes. A prime example is the **Immersive Reader** built into Microsoft Edge. 
+Modern browsers have introduced reading modes to address this. Microsoft Edge's **Immersive Reader** is a good example.
 
 **Case Study: Designing for Dyslexia**
-The Immersive Reader was originally developed specifically to assist students with dyslexia and dysgraphia. When activated (by clicking the book icon in the address bar), the browser strips away all ads, sidebars, and complex formatting, presenting the article as clean, customizable text.
+Microsoft originally developed Immersive Reader to help students with dyslexia and dysgraphia. When activated by clicking the book icon in the address bar, the browser removes ads, sidebars, and complex formatting to present clean, customizable text.
 
-Because it was designed with dyslexia in mind, it includes highly specialized tools:
-*   **Text Spacing:** Widens the gaps between words and lines to reduce visual crowding.
-*   **Syllable Splitting:** Breaks complex words down into their component syllables.
-*   **Line Focus:** Highlights only one, three, or five lines of text at a time, darkening the rest of the screen to prevent the reader from losing their place.
+Designed with dyslexia in mind, the tool includes specific features:
+*   **Text Spacing:** Increases the gaps between words and lines to improve readability.
+*   **Syllable Splitting:** Breaks words into syllables.
+*   **Line Focus:** Highlights one, three, or five lines of text at a time, darkening the rest of the screen so readers don't lose their place.
 
-While built as an assistive tool for neurodivergent students, the Immersive Reader is now beloved by millions of neurotypical users who simply want to read a recipe or a news article without being bombarded by digital clutter. A calm, focused digital environment benefits absolutely everyone.
+Although built as an assistive tool, Immersive Reader is now used by millions to read articles or recipes without digital clutter. A focused digital environment benefits everyone.
