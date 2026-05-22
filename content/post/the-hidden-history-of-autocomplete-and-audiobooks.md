@@ -1,6 +1,6 @@
 +++
 title = "The Hidden History of Autocomplete and Audiobooks"
-date = 2026-05-22T10:02:00Z
+date = 2026-05-21T10:02:00Z
 draft = false
 categories = ["Accessibility", "History"]
 tags = ["DigitalDesign", "InclusiveTech", "HistoryOfTech", "UXDesign"]

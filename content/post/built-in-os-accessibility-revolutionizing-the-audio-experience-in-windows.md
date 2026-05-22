@@ -1,6 +1,6 @@
 +++
 title = "Built-in OS Accessibility: Revolutionizing the Audio Experience in Windows"
-date = 2026-05-22T10:07:00Z
+date = 2026-05-21T10:07:00Z
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["A11y", "LiveCaptions", "HearingAccessibility", "Windows11"]

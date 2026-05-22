@@ -1,6 +1,6 @@
 +++
 title = "Designing for the Edges: Why Average is the Enemy of Innovation"
-date = 2026-05-22T10:11:00Z
+date = 2026-05-21T10:11:00Z
 draft = false
 categories = ["Accessibility", "Design"]
 tags = ["InclusiveDesign", "TechLeadership", "DesignThinking"]

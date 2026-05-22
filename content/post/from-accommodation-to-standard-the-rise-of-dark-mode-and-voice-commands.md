@@ -1,6 +1,6 @@
 +++
 title = "From Accommodation to Standard: The Rise of Dark Mode and Voice Commands"
-date = 2026-05-22T10:01:00Z
+date = 2026-05-21T10:01:00Z
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["TechTrends", "DarkMode", "Innovation", "VoiceUI"]

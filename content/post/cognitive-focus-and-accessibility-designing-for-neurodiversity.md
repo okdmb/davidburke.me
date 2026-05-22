@@ -1,6 +1,6 @@
 +++
 title = "Cognitive Focus and Accessibility: Designing for Neurodiversity"
-date = 2026-05-22T10:09:00Z
+date = 2026-05-21T10:09:00Z
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["Neurodiversity", "Focus", "CognitiveAccessibility", "UX"]

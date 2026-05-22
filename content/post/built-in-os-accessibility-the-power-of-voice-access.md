@@ -1,6 +1,6 @@
 +++
 title = "Built-in OS Accessibility: The Power of Voice Access"
-date = 2026-05-22T10:08:00Z
+date = 2026-05-21T10:08:00Z
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["VoiceTech", "Productivity", "HandsFree", "Windows11"]

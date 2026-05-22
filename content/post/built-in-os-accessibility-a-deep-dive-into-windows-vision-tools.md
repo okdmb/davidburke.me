@@ -1,6 +1,6 @@
 +++
 title = "Built-in OS Accessibility: A Deep Dive into Windows Vision Tools"
-date = 2026-05-22T10:06:00Z
+date = 2026-05-21T10:06:00Z
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["Windows11", "ProductivityTips", "TechTips", "LowVision"]

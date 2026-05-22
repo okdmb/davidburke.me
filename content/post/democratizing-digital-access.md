@@ -1,6 +1,6 @@
 +++
 title = "Democratizing Digital Access"
-date = 2026-05-22T11:00:00Z
+date = 2026-05-21T11:00:00Z
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["OpenSource", "OpenHardware", "InclusiveDesign", "Innovation"]
