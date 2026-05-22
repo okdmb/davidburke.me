@@ -1,6 +1,6 @@
 +++
 title = "The Rolling Quads and the History of the Curb-Cut Effect"
-date = 2026-05-16T10:10:00Z
+date = 2026-05-22T10:10:00Z
 draft = false
 categories = ["Accessibility", "History"]
 tags = ["DisabilityRights", "History", "InclusiveDesign", "CurbCutEffect"]

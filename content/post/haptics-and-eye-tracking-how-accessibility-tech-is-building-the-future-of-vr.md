@@ -1,6 +1,6 @@
 +++
 title = "Haptics and Eye-Tracking: How Accessibility Tech is Building the Future of VR"
-date = 2026-05-16T10:05:00Z
+date = 2026-05-22T10:05:00Z
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["VirtualReality", "Haptics", "Gaming", "Innovation"]

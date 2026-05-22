@@ -1,6 +1,6 @@
 +++
 title = "How to Make Windows More Accessible"
-date = 2026-04-19T22:12:44Z
+date = 2026-05-22T22:12:44Z
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["Windows", "Inclusion", "Productivity"]

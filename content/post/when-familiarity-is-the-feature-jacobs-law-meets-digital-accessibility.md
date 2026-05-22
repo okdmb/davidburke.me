@@ -1,3 +1,12 @@
++++
+title = "When Familiarity Is the Feature: Jakob's Law Meets Digital Accessibility"
+date = 2026-05-22T10:00:00Z
+draft = false
+categories = ["Accessibility", "UX Design"]
+tags = ["JakobsLaw", "DesignPsychology", "InclusiveDesign"]
+description = "A deep dive into how Jakob's Law of UX intersects with digital accessibility to create more inclusive and familiar user experiences."
++++
+
 # When Familiarity *Is* the Feature: Jakob's Law Meets Digital Accessibility
 
 **UX Design · Accessibility · Psychology**

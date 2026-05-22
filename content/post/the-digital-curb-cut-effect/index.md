@@ -1,6 +1,6 @@
 +++
 title = "The Digital Curb Cut Effect"
-date = 2026-04-20T03:00:00Z
+date = 2026-05-22T03:00:00Z
 draft = false
 categories = ["Accessibility", "Design"]
 tags = ["Inclusion", "UX", "Productivity"]

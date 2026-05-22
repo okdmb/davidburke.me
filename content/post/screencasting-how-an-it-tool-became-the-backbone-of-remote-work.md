@@ -1,6 +1,6 @@
 +++
 title = "Screencasting: How an IT Tool Became the Backbone of Remote Work"
-date = 2026-05-16T10:03:00Z
+date = 2026-05-22T10:03:00Z
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["RemoteWork", "UX", "FutureOfWork", "Screencasting"]
