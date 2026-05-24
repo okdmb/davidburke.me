@@ -1,4 +1,15 @@
-{{- $str := . -}}
-{{- $hash := hash.FNV32a $str -}}
-{{- $idx := mod $hash 9 -}}
+{{- $str := lower . -}}
+{{- $idx := -1 -}}
+
+{{- if or (eq $str "accessibility") (eq $str "accessibilitytech") (eq $str "a11y") -}}
+    {{- $idx = 5 -}} {{/* Blue */}}
+{{- else if eq $str "guides" -}}
+    {{- $idx = 4 -}} {{/* Green */}}
+{{- else if eq $str "documentation" -}}
+    {{- $idx = 6 -}} {{/* Purple */}}
+{{- else -}}
+    {{- $hash := hash.FNV32a $str -}}
+    {{- $idx = mod $hash 9 -}}
+{{- end -}}
+
 {{- return dict "Index" $idx -}}

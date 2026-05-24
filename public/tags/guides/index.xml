@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Guides on David Burke</title><link>https://davidburke.me/tags/guides/</link><description>Recent content in Guides on David Burke</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 21 May 2026 22:12:44 +0000</lastBuildDate><atom:link href="https://davidburke.me/tags/guides/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Make Windows More Accessible</title><link>https://davidburke.me/p/how-to-make-windows-more-accessible/</link><pubDate>Thu, 21 May 2026 22:12:44 +0000</pubDate><guid>https://davidburke.me/p/how-to-make-windows-more-accessible/</guid><description>&lt;img src="https://davidburke.me/img/accessibility/dark-mode-comparison.jpg" alt="Featured image of post How to Make Windows More Accessible" /&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;This guide explains how to customize Windows using its built-in accessibility tools. Originally designed for specific disabilities, these settings improve the computing experience for everyone.&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h2 id="introduction"&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;The &lt;strong&gt;Accessibility menu&lt;/strong&gt; (formerly &amp;ldquo;Ease of Access&amp;rdquo;) is the hub for these tools. It groups features by vision, hearing, dexterity, and cognitive needs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="how-to-access-the-menu"&gt;How to Access the Menu
+&lt;/h2&gt;&lt;p&gt;Open Accessibility settings using one of these methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Keyboard Shortcut:&lt;/strong&gt; Press &lt;strong&gt;Win + U&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Settings App:&lt;/strong&gt; Go to &lt;strong&gt;Start &amp;gt; Settings &amp;gt; Accessibility&lt;/strong&gt; (Windows 11) or &lt;strong&gt;Ease of Access&lt;/strong&gt; (Windows 10).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="The Windows 11 Accessibility Settings menu showing various categories like Vision, Hearing, and Interaction" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://davidburke.me/img/accessibility/menu-mockup.svg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="vision-tools"&gt;Vision Tools
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Essential for low vision, color blindness, or eye fatigue.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Text &amp;amp; Scaling:&lt;/strong&gt; Increase text size in &lt;strong&gt;Accessibility &amp;gt; Text size&lt;/strong&gt;, or scale the entire interface in &lt;strong&gt;System &amp;gt; Display &amp;gt; Scale&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Text Cursor Indicator:&lt;/strong&gt; Add a bright color to your cursor in &lt;strong&gt;Accessibility &amp;gt; Text cursor&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Magnifier:&lt;/strong&gt; Zoom in by pressing &lt;strong&gt;Win + Plus (+)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Narrator:&lt;/strong&gt; Toggle the built-in screen reader with &lt;strong&gt;Win + Ctrl + Enter&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Color Filters &amp;amp; High Contrast:&lt;/strong&gt; Apply color-blindness filters or high-contrast themes in &lt;strong&gt;Accessibility &amp;gt; Color filters&lt;/strong&gt; or &lt;strong&gt;Contrast themes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pointer Customization:&lt;/strong&gt; Enlarge or recolor the mouse pointer in &lt;strong&gt;Accessibility &amp;gt; Mouse pointer and touch&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Side-by-side comparison of standard light mode and high-contrast dark mode interfaces" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://davidburke.me/img/accessibility/dark-mode-comparison.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="hearing-tools"&gt;Hearing Tools
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Helpful for hearing loss or noisy environments.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Live Captions:&lt;/strong&gt; Transcribe spoken audio automatically. Enable this in &lt;strong&gt;Accessibility &amp;gt; Captions&lt;/strong&gt; or press &lt;strong&gt;Win + Ctrl + L&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mono Audio:&lt;/strong&gt; Combine left and right stereo channels in &lt;strong&gt;Accessibility &amp;gt; Audio&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visual Alerts:&lt;/strong&gt; Flash your screen or active window for audio notifications in &lt;strong&gt;Accessibility &amp;gt; Audio&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="A demonstration of live captions transcribing spoken audio in real-time" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://davidburke.me/img/accessibility/captions-example.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="dexterity--mobility-tools"&gt;Dexterity &amp;amp; Mobility Tools
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Useful for limited mobility, tremors, or hands-free control.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Voice Access/Typing:&lt;/strong&gt; Control your PC and dictate text. Press &lt;strong&gt;Win + H&lt;/strong&gt; to type with your voice, or enable voice control in &lt;strong&gt;Accessibility &amp;gt; Speech&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sticky Keys:&lt;/strong&gt; Press key combinations (like Ctrl + Alt + Del) one key at a time. Press &lt;strong&gt;Shift&lt;/strong&gt; five times to toggle, or go to &lt;strong&gt;Accessibility &amp;gt; Keyboard&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;On-Screen Keyboard:&lt;/strong&gt; Open a virtual keyboard with &lt;strong&gt;Win + Ctrl + O&lt;/strong&gt; or in &lt;strong&gt;Accessibility &amp;gt; Keyboard&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Eye Control:&lt;/strong&gt; Navigate using eye-tracking hardware in &lt;strong&gt;Accessibility &amp;gt; Eye control&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="A user interacting with a device using voice commands, demonstrating hands-free control" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://davidburke.me/img/accessibility/voice-assistant-example.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="cognitive--focus-tools"&gt;Cognitive &amp;amp; Focus Tools
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Ideal for minimizing distractions and improving concentration.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Focus Sessions:&lt;/strong&gt; Block distractions by enabling &amp;ldquo;Do Not Disturb&amp;rdquo; and silencing taskbar badges in &lt;strong&gt;System &amp;gt; Focus&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Disable Animations:&lt;/strong&gt; Reduce motion and improve performance by turning off transparency and animations in &lt;strong&gt;Accessibility &amp;gt; Visual effects&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Night Light:&lt;/strong&gt; Limit blue light to reduce eye strain. Go to &lt;strong&gt;System &amp;gt; Display &amp;gt; Night light&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Taskbar Simplification:&lt;/strong&gt; Hide unnecessary icons in &lt;strong&gt;Settings &amp;gt; Personalization &amp;gt; Taskbar&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immersive Reader:&lt;/strong&gt; Remove visual clutter from web pages in Microsoft Edge by clicking the &lt;strong&gt;Immersive Reader icon&lt;/strong&gt; in the address bar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Microsoft Edge’s Immersive Reader simplifying a news article into a clean, text-only layout" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="https://davidburke.me/img/accessibility/immersive-reader-mockup.svg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="accessibility-shortcuts-cheat-sheet"&gt;Accessibility Shortcuts Cheat Sheet
+&lt;/h2&gt;&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Feature&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Keyboard Shortcut&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;Accessibility Settings&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Win + U&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;Magnifier (Zoom In)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Win + Plus (+)&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;Magnifier (Zoom Out)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Win + Minus (-)&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;Narrator (On/Off)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Win + Ctrl + Enter&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;Voice Typing&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Win + H&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;Live Captions&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Win + Ctrl + L&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;On-Screen Keyboard&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Win + Ctrl + O&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="detailed-setup-guide"&gt;Detailed Setup Guide
+&lt;/h2&gt;&lt;p&gt;Here is how to set up Narrator and Voice Access, the core tools for screen-reading and hands-free control.&lt;/p&gt;
+&lt;h3 id="1-setting-up-narrator-screen-reader"&gt;1. Setting Up Narrator (Screen Reader)
+&lt;/h3&gt;&lt;p&gt;Narrator reads your screen aloud so you can navigate without a mouse.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quick Start/Stop:&lt;/strong&gt; Press &lt;strong&gt;Win + Ctrl + Enter&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Settings:&lt;/strong&gt; Press &lt;strong&gt;Win + Ctrl + N&lt;/strong&gt; to open Narrator settings.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key Customizations:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Natural Voices:&lt;/strong&gt; In &lt;strong&gt;Settings &amp;gt; Accessibility &amp;gt; Narrator&lt;/strong&gt;, select &lt;strong&gt;Add&lt;/strong&gt; under &amp;ldquo;Add natural voices&amp;rdquo; for realistic speech.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto-Start:&lt;/strong&gt; Check &lt;strong&gt;Start Narrator after sign-in&lt;/strong&gt; or &lt;strong&gt;Start Narrator before sign-in&lt;/strong&gt; to launch it automatically.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Verbosity:&lt;/strong&gt; Control how much detail Narrator provides (like button names) under the &lt;strong&gt;Verbosity&lt;/strong&gt; section.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-setting-up-voice-access-windows-11"&gt;2. Setting Up Voice Access (Windows 11)
+&lt;/h3&gt;&lt;p&gt;Voice Access lets you control your PC and dictate text completely hands-free. It processes audio locally and works offline. &lt;em&gt;(Note: Windows 10 users have a similar feature called Windows Speech Recognition.)&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Turn it On:&lt;/strong&gt; Go to &lt;strong&gt;Settings &amp;gt; Accessibility &amp;gt; Speech&lt;/strong&gt; and toggle &lt;strong&gt;Voice access&lt;/strong&gt; to &lt;strong&gt;On&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Initial Setup:&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;Select your microphone.&lt;/li&gt;
+&lt;li&gt;Wait for the system to download the speech model.&lt;/li&gt;
+&lt;li&gt;Complete the interactive guide to learn commands like &amp;ldquo;Open Notepad&amp;rdquo; or &amp;ldquo;Click Start&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basic Commands:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Wake Up/Sleep:&lt;/strong&gt; Say &amp;ldquo;Voice access wake up&amp;rdquo; to listen, or &amp;ldquo;Voice access sleep&amp;rdquo; to pause.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interacting:&lt;/strong&gt; Say &amp;ldquo;Show numbers&amp;rdquo; to label clickable items. Then say &amp;ldquo;Click [number]&amp;rdquo; to select one.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Grid Control:&lt;/strong&gt; Say &amp;ldquo;Show grid&amp;rdquo; to overlay a grid for precise mouse targeting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="comparison"&gt;Comparison
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Narrator:&lt;/strong&gt; Choose this if you need the computer to read content to you.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Voice Access:&lt;/strong&gt; Choose this if you need to operate the computer hands-free.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="conclusion"&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;Windows accessibility features continue to improve. Exploring the Accessibility menu (&lt;strong&gt;Win + U&lt;/strong&gt;) can make your daily computing experience more comfortable and efficient.&lt;/p&gt;</description></item></channel></rss>

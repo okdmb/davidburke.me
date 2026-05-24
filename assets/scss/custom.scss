@@ -3,27 +3,27 @@
 }
 
 $notion-light: (
-    0: (bg: #e3e2e0, text: #32302c, hover-bg: #d3d1ce), // gray
-    1: (bg: #eee0da, text: #442a1e, hover-bg: #e0cec7), // brown
-    2: (bg: #fadec9, text: #49290e, hover-bg: #ebcbb3), // orange
-    3: (bg: #fdecc8, text: #402c1b, hover-bg: #eaddb4), // yellow
-    4: (bg: #dbeddb, text: #1c3829, hover-bg: #c7dec7), // green
-    5: (bg: #d3e5ef, text: #183347, hover-bg: #c0d6e3), // blue
-    6: (bg: #e8deee, text: #412454, hover-bg: #d9cce0), // purple
-    7: (bg: #f5e0e9, text: #4c2337, hover-bg: #e6cdd8), // pink
-    8: (bg: #ffe2dd, text: #5d1715, hover-bg: #f0cec9)  // red
+    0: (bg: #91918e, text: #fff, hover-bg: #7a7a77), // gray
+    1: (bg: #976d5c, text: #fff, hover-bg: #835e4f), // brown
+    2: (bg: #d9730d, text: #fff, hover-bg: #ba620b), // orange
+    3: (bg: #cb912f, text: #fff, hover-bg: #af7d28), // yellow
+    4: (bg: #448361, text: #fff, hover-bg: #3a6f52), // green
+    5: (bg: #337ea9, text: #fff, hover-bg: #2b6a8e), // blue
+    6: (bg: #9065b0, text: #fff, hover-bg: #7b5697), // purple
+    7: (bg: #c14c8a, text: #fff, hover-bg: #a64176), // pink
+    8: (bg: #d44c47, text: #fff, hover-bg: #b7413d)  // red
 );
 
 $notion-dark: (
-    0: (bg: #323232, text: #e0e0e0, hover-bg: #424242),
-    1: (bg: #432b22, text: #e3b692, hover-bg: #54362a),
-    2: (bg: #593922, text: #ffb073, hover-bg: #6b4429),
-    3: (bg: #594524, text: #ffc973, hover-bg: #6b532b),
-    4: (bg: #1d4031, text: #92d499, hover-bg: #244f3d),
-    5: (bg: #1e3d59, text: #96c7f2, hover-bg: #254a6b),
-    6: (bg: #3c2559, text: #c99bf2, hover-bg: #4a2e6e),
-    7: (bg: #522238, text: #f28ab0, hover-bg: #632944),
-    8: (bg: #5c2423, text: #ff8580, hover-bg: #6e2b2a)
+    0: (bg: #323232, text: #fff, hover-bg: #424242),
+    1: (bg: #432b22, text: #fff, hover-bg: #54362a),
+    2: (bg: #593922, text: #fff, hover-bg: #6b4429),
+    3: (bg: #594524, text: #fff, hover-bg: #6b532b),
+    4: (bg: #1d4031, text: #fff, hover-bg: #244f3d),
+    5: (bg: #1e3d59, text: #fff, hover-bg: #254a6b),
+    6: (bg: #3c2559, text: #fff, hover-bg: #4a2e6e),
+    7: (bg: #522238, text: #fff, hover-bg: #632944),
+    8: (bg: #5c2423, text: #fff, hover-bg: #6e2b2a)
 );
 
 .article-category a,

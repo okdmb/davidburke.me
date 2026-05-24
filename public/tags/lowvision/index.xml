@@ -1,15 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>LowVision on David Burke</title>
-        <link>https://davidburke.me/tags/lowvision/</link>
-        <description>Recent content in LowVision on David Burke</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Fri, 22 May 2026 10:06:00 +0000</lastBuildDate><atom:link href="https://davidburke.me/tags/lowvision/index.xml" rel="self" type="application/rss+xml" /><item>
-            <title>Built-in OS Accessibility: A Deep Dive into Windows Vision Tools</title>
-            <link>https://davidburke.me/p/built-in-os-accessibility-a-deep-dive-into-windows-vision-tools/</link>
-            <pubDate>Fri, 22 May 2026 10:06:00 +0000</pubDate>
-            <guid>https://davidburke.me/p/built-in-os-accessibility-a-deep-dive-into-windows-vision-tools/</guid>
-            <description>&lt;p&gt;In the past, accessibility meant buying expensive third-party apps that broke with every OS update. Today, accessibility is a core OS feature, not an afterthought.&lt;/p&gt;&#xA;&lt;p&gt;Windows 11 includes built-in tools for a range of visual needs, from severe vision loss to daily eye strain.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-central-hub-accessibility-settings&#34;&gt;The Central Hub: Accessibility Settings&#xA;&lt;/h3&gt;&lt;p&gt;Microsoft redesigned its Accessibility menu (formerly &amp;ldquo;Ease of Access&amp;rdquo;). Press &lt;strong&gt;Win + U&lt;/strong&gt; to open it instantly.&lt;/p&gt;&#xA;&lt;h3 id=&#34;key-vision-tools&#34;&gt;Key Vision Tools&#xA;&lt;/h3&gt;&lt;h4 id=&#34;1-the-magnifier&#34;&gt;1. The Magnifier&#xA;&lt;/h4&gt;&lt;p&gt;When standard text scaling isn&amp;rsquo;t enough, Windows Magnifier zooms in on your screen.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;How to use it:&lt;/strong&gt; Press &lt;strong&gt;Win + Plus (+)&lt;/strong&gt; to turn it on and zoom in. Press &lt;strong&gt;Win + Minus (-)&lt;/strong&gt; to zoom out.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Customization:&lt;/strong&gt; Magnify the full screen, use a lens that follows your mouse, or dock the view at the top of the screen. It helps when reading small print or analyzing detailed graphics.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;2-narrator-the-built-in-screen-reader&#34;&gt;2. Narrator: The Built-in Screen Reader&#xA;&lt;/h4&gt;&lt;p&gt;Narrator is the built-in screen reader. While power users often rely on third-party options like JAWS or NVDA, Narrator has become a capable alternative.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;How to use it:&lt;/strong&gt; Toggle it on or off instantly with &lt;strong&gt;Win + Ctrl + Enter&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Natural Voices:&lt;/strong&gt; Windows 11 replaces older robotic voices with realistic, AI-generated speech, making long listening sessions much more comfortable.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;3-high-contrast-and-custom-pointers&#34;&gt;3. High-Contrast and Custom Pointers&#xA;&lt;/h4&gt;&lt;p&gt;Sometimes contrast matters more than size.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Contrast Themes:&lt;/strong&gt; Found in the Accessibility settings, these strict color palettes (like bright yellow or cyan text on a pure black background) increase visibility for users with light sensitivity or color blindness.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mouse Pointer Customization:&lt;/strong&gt; You can increase the pointer&amp;rsquo;s size and change its color to high-visibility neon green or pink. This helps everyone keep track of their cursor across multiple monitors.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By integrating these tools, Microsoft ensures basic accessibility works out of the box on every Windows machine. It&amp;rsquo;s no longer an add-on; it&amp;rsquo;s foundational.&lt;/p&gt;&#xA;</description>
-        </item></channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LowVision on David Burke</title><link>https://davidburke.me/tags/lowvision/</link><description>Recent content in LowVision on David Burke</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 21 May 2026 10:06:00 +0000</lastBuildDate><atom:link href="https://davidburke.me/tags/lowvision/index.xml" rel="self" type="application/rss+xml"/><item><title>Built-in OS Accessibility: A Deep Dive into Windows Vision Tools</title><link>https://davidburke.me/p/built-in-os-accessibility-a-deep-dive-into-windows-vision-tools/</link><pubDate>Thu, 21 May 2026 10:06:00 +0000</pubDate><guid>https://davidburke.me/p/built-in-os-accessibility-a-deep-dive-into-windows-vision-tools/</guid><description>&lt;p&gt;In the past, accessibility meant buying expensive third-party apps that broke with every OS update. Today, accessibility is a core OS feature, not an afterthought.&lt;/p&gt;
+&lt;p&gt;Windows 11 includes built-in tools for a range of visual needs, from severe vision loss to daily eye strain.&lt;/p&gt;
+&lt;h3 id="the-central-hub-accessibility-settings"&gt;The Central Hub: Accessibility Settings
+&lt;/h3&gt;&lt;p&gt;Microsoft redesigned its Accessibility menu (formerly &amp;ldquo;Ease of Access&amp;rdquo;). Press &lt;strong&gt;Win + U&lt;/strong&gt; to open it instantly.&lt;/p&gt;
+&lt;h3 id="key-vision-tools"&gt;Key Vision Tools
+&lt;/h3&gt;&lt;h4 id="1-the-magnifier"&gt;1. The Magnifier
+&lt;/h4&gt;&lt;p&gt;When standard text scaling isn&amp;rsquo;t enough, Windows Magnifier zooms in on your screen.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How to use it:&lt;/strong&gt; Press &lt;strong&gt;Win + Plus (+)&lt;/strong&gt; to turn it on and zoom in. Press &lt;strong&gt;Win + Minus (-)&lt;/strong&gt; to zoom out.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Customization:&lt;/strong&gt; Magnify the full screen, use a lens that follows your mouse, or dock the view at the top of the screen. It helps when reading small print or analyzing detailed graphics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-narrator-the-built-in-screen-reader"&gt;2. Narrator: The Built-in Screen Reader
+&lt;/h4&gt;&lt;p&gt;Narrator is the built-in screen reader. While power users often rely on third-party options like JAWS or NVDA, Narrator has become a capable alternative.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How to use it:&lt;/strong&gt; Toggle it on or off instantly with &lt;strong&gt;Win + Ctrl + Enter&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Natural Voices:&lt;/strong&gt; Windows 11 replaces older robotic voices with realistic, AI-generated speech, making long listening sessions much more comfortable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="3-high-contrast-and-custom-pointers"&gt;3. High-Contrast and Custom Pointers
+&lt;/h4&gt;&lt;p&gt;Sometimes contrast matters more than size.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Contrast Themes:&lt;/strong&gt; Found in the Accessibility settings, these strict color palettes (like bright yellow or cyan text on a pure black background) increase visibility for users with light sensitivity or color blindness.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mouse Pointer Customization:&lt;/strong&gt; You can increase the pointer&amp;rsquo;s size and change its color to high-visibility neon green or pink. This helps everyone keep track of their cursor across multiple monitors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By integrating these tools, Microsoft ensures basic accessibility works out of the box on every Windows machine. It&amp;rsquo;s no longer an add-on; it&amp;rsquo;s foundational.&lt;/p&gt;</description></item></channel></rss>

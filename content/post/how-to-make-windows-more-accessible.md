@@ -3,7 +3,7 @@ title = "How to Make Windows More Accessible"
 date = 2026-05-21T22:12:44Z
 draft = false
 categories = ["Accessibility", "Guides"]
-tags = ["Windows", "Inclusion", "Productivity"]
+tags = ["Windows", "Inclusion", "Productivity", "Guides"]
 image = "/img/accessibility/dark-mode-comparison.jpg"
 description = "A comprehensive guide on optimizing Windows for better vision, hearing, dexterity, and cognitive accessibility—benefiting everyone through the 'curb-cut effect'."
 +++

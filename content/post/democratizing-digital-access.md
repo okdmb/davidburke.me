@@ -3,7 +3,7 @@ title = "Democratizing Digital Access"
 date = 2026-05-21T11:00:00Z
 draft = false
 categories = ["Accessibility", "Technology"]
-tags = ["OpenSource", "OpenHardware", "InclusiveDesign", "Innovation"]
+tags = ["OpenSource", "OpenHardware", "InclusiveDesign", "Innovation", "Accessibility"]
 description = "Exploring how open-source software and open hardware projects are democratizing accessibility and empowering global communities."
 +++
 
