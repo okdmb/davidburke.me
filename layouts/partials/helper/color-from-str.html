@@ -1,0 +1,4 @@
+{{- $str := . -}}
+{{- $hash := hash.FNV32a $str -}}
+{{- $idx := mod $hash 9 -}}
+{{- return dict "Index" $idx -}}

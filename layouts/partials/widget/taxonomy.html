@@ -32,7 +32,7 @@
     <div class="tagCloud-tags">
         {{ range first $limit $taxonomy.ByCount }}
             {{ $color := partial "helper/color-from-str" .Page.Title }}
-            <a href="{{ .Page.RelPermalink }}" style="--tag-hue: {{ $color.Hue }};">
+            <a href="{{ .Page.RelPermalink }}" data-color-index="{{ $color.Index }}">
                 {{ .Page.Title }}
             </a>
         {{ end }}

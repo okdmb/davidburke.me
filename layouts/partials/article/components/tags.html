@@ -2,7 +2,7 @@
     <section class="article-tags">
         {{ range (.GetTerms "tags") }}
             {{ $color := partial "helper/color-from-str" .LinkTitle }}
-            <a href="{{ .RelPermalink }}" style="--tag-hue: {{ $color.Hue }};">{{ .LinkTitle }}</a>
+            <a href="{{ .RelPermalink }}" data-color-index="{{ $color.Index }}">{{ .LinkTitle }}</a>
         {{ end }}
     </section>
 {{ end }}

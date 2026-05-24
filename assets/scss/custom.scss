@@ -2,18 +2,48 @@
     margin-top: 0;
 }
 
+$notion-light: (
+    0: (bg: #e3e2e0, text: #32302c, hover-bg: #d3d1ce), // gray
+    1: (bg: #eee0da, text: #442a1e, hover-bg: #e0cec7), // brown
+    2: (bg: #fadec9, text: #49290e, hover-bg: #ebcbb3), // orange
+    3: (bg: #fdecc8, text: #402c1b, hover-bg: #eaddb4), // yellow
+    4: (bg: #dbeddb, text: #1c3829, hover-bg: #c7dec7), // green
+    5: (bg: #d3e5ef, text: #183347, hover-bg: #c0d6e3), // blue
+    6: (bg: #e8deee, text: #412454, hover-bg: #d9cce0), // purple
+    7: (bg: #f5e0e9, text: #4c2337, hover-bg: #e6cdd8), // pink
+    8: (bg: #ffe2dd, text: #5d1715, hover-bg: #f0cec9)  // red
+);
+
+$notion-dark: (
+    0: (bg: #323232, text: #e0e0e0, hover-bg: #424242),
+    1: (bg: #432b22, text: #e3b692, hover-bg: #54362a),
+    2: (bg: #593922, text: #ffb073, hover-bg: #6b4429),
+    3: (bg: #594524, text: #ffc973, hover-bg: #6b532b),
+    4: (bg: #1d4031, text: #92d499, hover-bg: #244f3d),
+    5: (bg: #1e3d59, text: #96c7f2, hover-bg: #254a6b),
+    6: (bg: #3c2559, text: #c99bf2, hover-bg: #4a2e6e),
+    7: (bg: #522238, text: #f28ab0, hover-bg: #632944),
+    8: (bg: #5c2423, text: #ff8580, hover-bg: #6e2b2a)
+);
+
 .article-category a,
 .article-tags a,
 .tagCloud .tagCloud-tags a {
-    background-color: hsl(var(--tag-hue, 210), 60%, 84%) !important;
-    color: hsl(var(--tag-hue, 210), 60%, 15%) !important;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: none !important;
 
-    &:hover {
-        background-color: hsl(var(--tag-hue, 210), 60%, 75%) !important;
-        color: hsl(var(--tag-hue, 210), 60%, 10%) !important;
-        box-shadow: none !important;
+    @for $i from 0 through 8 {
+        &[data-color-index="#{$i}"] {
+            $light-map: map-get($notion-light, $i);
+            background-color: map-get($light-map, bg) !important;
+            color: map-get($light-map, text) !important;
+
+            &:hover {
+                background-color: map-get($light-map, hover-bg) !important;
+                color: map-get($light-map, text) !important;
+                box-shadow: none !important;
+            }
+        }
     }
 }
 
@@ -21,12 +51,17 @@
     .article-category a,
     .article-tags a,
     .tagCloud .tagCloud-tags a {
-        background-color: hsl(var(--tag-hue, 210), 40%, 25%) !important;
-        color: hsl(var(--tag-hue, 210), 60%, 90%) !important;
+        @for $i from 0 through 8 {
+            &[data-color-index="#{$i}"] {
+                $dark-map: map-get($notion-dark, $i);
+                background-color: map-get($dark-map, bg) !important;
+                color: map-get($dark-map, text) !important;
 
-        &:hover {
-            background-color: hsl(var(--tag-hue, 210), 40%, 35%) !important;
-            color: hsl(var(--tag-hue, 210), 60%, 95%) !important;
+                &:hover {
+                    background-color: map-get($dark-map, hover-bg) !important;
+                    color: map-get($dark-map, text) !important;
+                }
+            }
         }
     }
 }
