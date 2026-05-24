@@ -32,15 +32,19 @@
                     
                     // Style it to sit in the header next to the hamburger
                     toggle.style.position = 'absolute';
-                    toggle.style.right = '50px'; // Give space for the hamburger
+                    toggle.style.right = '70px'; // Give adequate space for the hamburger
                     toggle.style.top = '15px'; // Align vertically
                     toggle.style.display = 'flex';
                     toggle.style.padding = '0';
                     toggle.style.zIndex = '10'; // Ensure it's clickable above header contents
+                    toggle.style.flexDirection = 'row-reverse'; // Put text to the left of the icon
                     
-                    // Hide the text label on mobile to save space
+                    // Show the text label and add spacing
                     const textSpan = toggle.querySelector('span');
-                    if(textSpan) textSpan.style.display = 'none';
+                    if(textSpan) {
+                        textSpan.style.display = '';
+                        textSpan.style.marginRight = '8px';
+                    }
                 }
             } else {
                 // Desktop layout
@@ -55,10 +59,14 @@
                     toggle.style.display = originalStyles.display;
                     toggle.style.padding = originalStyles.padding;
                     toggle.style.zIndex = originalStyles.zIndex;
+                    toggle.style.flexDirection = ''; // Reset flex direction
                     
-                    // Restore text label
+                    // Restore text label formatting
                     const textSpan = toggle.querySelector('span');
-                    if(textSpan) textSpan.style.display = '';
+                    if(textSpan) {
+                        textSpan.style.display = '';
+                        textSpan.style.marginRight = '';
+                    }
                 }
             }
         }
