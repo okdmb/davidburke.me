@@ -1,6 +1,7 @@
 +++
 title = "Built-in OS Accessibility: A Deep Dive into Windows Vision Tools"
 date = 2026-05-21T10:06:00Z
+image = "/img/featured/built-in-os-accessibility-a-deep-dive-into-windows-vision-tools.svg"
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["Windows11", "ProductivityTips", "TechTips", "LowVision"]

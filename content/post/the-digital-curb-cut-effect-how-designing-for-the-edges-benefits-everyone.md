@@ -1,6 +1,7 @@
 +++
 title = "The Digital Curb-Cut Effect: How Designing for the Edges Benefits Everyone"
 date = 2026-05-21T10:00:00Z
+image = "/img/featured/the-digital-curb-cut-effect-how-designing-for-the-edges-benefits-everyone.svg"
 draft = false
 categories = ["Accessibility", "Design"]
 tags = ["InclusiveDesign", "UX", "CurbCutEffect", "CaseStudy"]

@@ -1,6 +1,7 @@
 +++
 title = "Designing for the Edges: Why Average is the Enemy of Innovation"
 date = 2026-05-21T10:11:00Z
+image = "/img/featured/designing-for-the-edges-why-average-is-the-enemy-of-innovation.svg"
 draft = false
 categories = ["Accessibility", "Design"]
 tags = ["InclusiveDesign", "TechLeadership", "DesignThinking"]

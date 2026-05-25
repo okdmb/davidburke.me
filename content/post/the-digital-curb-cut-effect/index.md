@@ -1,6 +1,7 @@
 +++
-title = "The Digital Curb Cut Effect"
-date = 2026-05-21T03:00:00Z
+title = "The Digital Curb-Cut Effect"
+date = 2026-05-21T10:02:00Z
+image = "/img/featured/the-digital-curb-cut-effect.svg"
 draft = false
 categories = ["Accessibility", "Design"]
 tags = ["Inclusion", "UX", "Productivity"]

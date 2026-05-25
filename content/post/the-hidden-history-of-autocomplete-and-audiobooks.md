@@ -1,6 +1,7 @@
 +++
 title = "The Hidden History of Autocomplete and Audiobooks"
 date = 2026-05-21T10:02:00Z
+image = "/img/featured/the-hidden-history-of-autocomplete-and-audiobooks.svg"
 draft = false
 categories = ["Accessibility", "History"]
 tags = ["DigitalDesign", "InclusiveTech", "HistoryOfTech", "UXDesign"]

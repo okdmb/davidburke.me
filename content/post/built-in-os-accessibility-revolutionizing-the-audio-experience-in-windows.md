@@ -1,6 +1,7 @@
 +++
 title = "Built-in OS Accessibility: Revolutionizing the Audio Experience in Windows"
 date = 2026-05-21T10:07:00Z
+image = "/img/featured/built-in-os-accessibility-revolutionizing-the-audio-experience-in-windows.svg"
 draft = false
 categories = ["Accessibility", "Guides"]
 tags = ["A11y", "LiveCaptions", "HearingAccessibility", "Windows11"]

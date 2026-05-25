@@ -1,6 +1,7 @@
 +++
 title = "Optical Character Recognition (OCR): From Niche Assistive Tech to Everyday Convenience"
 date = 2026-05-21T10:04:00Z
+image = "/img/featured/optical-character-recognition-ocr-from-niche-assistive-tech-to-everyday-convenience.svg"
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["AI", "OCR", "AccessibilityTech", "InclusiveDesign", "Documentation"]

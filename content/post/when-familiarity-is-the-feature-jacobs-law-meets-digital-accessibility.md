@@ -1,6 +1,7 @@
 +++
 title = "When Familiarity Is the Feature: Jakob's Law Meets Digital Accessibility"
 date = 2026-05-21T10:00:00Z
+image = "/img/featured/when-familiarity-is-the-feature-jacobs-law-meets-digital-accessibility.svg"
 draft = false
 categories = ["Accessibility", "Design"]
 tags = ["JakobsLaw", "DesignPsychology", "InclusiveDesign"]

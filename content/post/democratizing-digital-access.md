@@ -1,6 +1,7 @@
 +++
 title = "Democratizing Digital Access"
 date = 2026-05-21T11:00:00Z
+image = "/img/featured/democratizing-digital-access.svg"
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["OpenSource", "OpenHardware", "InclusiveDesign", "Innovation", "Accessibility"]

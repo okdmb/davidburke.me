@@ -1,6 +1,7 @@
 +++
 title = "From Accommodation to Standard: The Rise of Dark Mode and Voice Commands"
 date = 2026-05-21T10:01:00Z
+image = "/img/featured/from-accommodation-to-standard-the-rise-of-dark-mode-and-voice-commands.svg"
 draft = false
 categories = ["Accessibility", "Technology"]
 tags = ["TechTrends", "DarkMode", "Innovation", "VoiceUI"]
