@@ -2,7 +2,7 @@
     margin-top: 0;
 }
 
-$notion-light: (
+$notion-colors: (
     0: (bg: #91918e, text: #fff, hover-bg: #7a7a77), // gray
     1: (bg: #976d5c, text: #fff, hover-bg: #835e4f), // brown
     2: (bg: #d9730d, text: #fff, hover-bg: #ba620b), // orange
@@ -14,18 +14,6 @@ $notion-light: (
     8: (bg: #d44c47, text: #fff, hover-bg: #b7413d)  // red
 );
 
-$notion-dark: (
-    0: (bg: #323232, text: #fff, hover-bg: #424242),
-    1: (bg: #432b22, text: #fff, hover-bg: #54362a),
-    2: (bg: #593922, text: #fff, hover-bg: #6b4429),
-    3: (bg: #594524, text: #fff, hover-bg: #6b532b),
-    4: (bg: #1d4031, text: #fff, hover-bg: #244f3d),
-    5: (bg: #1e3d59, text: #fff, hover-bg: #254a6b),
-    6: (bg: #3c2559, text: #fff, hover-bg: #4a2e6e),
-    7: (bg: #522238, text: #fff, hover-bg: #632944),
-    8: (bg: #5c2423, text: #fff, hover-bg: #6e2b2a)
-);
-
 .article-category a,
 .article-tags a,
 .tagCloud .tagCloud-tags a {
@@ -34,33 +22,14 @@ $notion-dark: (
 
     @for $i from 0 through 8 {
         &[data-color-index="#{$i}"] {
-            $light-map: map-get($notion-light, $i);
-            background-color: map-get($light-map, bg) !important;
-            color: map-get($light-map, text) !important;
+            $map: map-get($notion-colors, $i);
+            background-color: map-get($map, bg) !important;
+            color: map-get($map, text) !important;
 
             &:hover {
-                background-color: map-get($light-map, hover-bg) !important;
-                color: map-get($light-map, text) !important;
+                background-color: map-get($map, hover-bg) !important;
+                color: map-get($map, text) !important;
                 box-shadow: none !important;
-            }
-        }
-    }
-}
-
-[data-scheme="dark"] {
-    .article-category a,
-    .article-tags a,
-    .tagCloud .tagCloud-tags a {
-        @for $i from 0 through 8 {
-            &[data-color-index="#{$i}"] {
-                $dark-map: map-get($notion-dark, $i);
-                background-color: map-get($dark-map, bg) !important;
-                color: map-get($dark-map, text) !important;
-
-                &:hover {
-                    background-color: map-get($dark-map, hover-bg) !important;
-                    color: map-get($dark-map, text) !important;
-                }
             }
         }
     }
