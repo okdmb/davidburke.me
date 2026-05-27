@@ -2,6 +2,24 @@
     margin-top: 0;
 }
 
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--accent-color);
+    color: var(--accent-color-text);
+    padding: 8px 16px;
+    z-index: 1000;
+    transition: top 0.3s;
+    border-bottom-right-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:focus {
+        top: 0;
+    }
+}
+
 $notion-colors: (
     0: (bg: #91918e, text: #fff, hover-bg: #7a7a77), // gray
     1: (bg: #976d5c, text: #fff, hover-bg: #835e4f), // brown

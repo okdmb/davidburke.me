@@ -1,5 +1,6 @@
 toggleMenu = "Toggle Menu"
 darkMode = "Dark Mode"
+skipToContent = "Skip to content"
 
 [list]
 section = "Section"
