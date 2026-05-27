@@ -1,6 +1,10 @@
 .site-name a,
-.article-title a {
-    text-decoration: none;
+.article-title a,
+.site-name a:hover,
+.article-title a:hover {
+    text-decoration: none !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
 }
 
 #dark-mode-toggle {
