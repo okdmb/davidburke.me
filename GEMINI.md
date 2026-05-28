@@ -41,3 +41,21 @@ To develop or build the site locally, you need to have Hugo installed (the Exten
 *   **Footer Credits:** The "designed by" footer credit is overridden in the local `i18n/en.toml` file to point to Jimmy's website.
 *   **Footer Overrides:** The copyright section in the footer is hidden by overriding the respective partial in the local `layouts/partials/` directory.
 *   **Deployment:** The `main` branch acts as the production branch. Pushing to `main` automatically triggers the GitHub Actions workflow to build and deploy the site.
+
+## Customizations & Overrides
+*   **Theme Overrides:** Local overrides for the Stack theme are located in the `layouts/` directory.
+    *   `layouts/partials/sidebar/left.html`: Relocated the dark mode toggle to sit immediately below the navigation links.
+    *   `layouts/baseof.html`: Added a hidden "Skip to content" accessibility link and an `id="main-content"` anchor to the main element.
+    *   `layouts/partials/article/components/details.html` & `tags.html`: Modified to support Notion-style dynamic coloring for tags and categories.
+    *   `layouts/partials/widget/taxonomy.html`: Sidebar tag/category widget updated to match post tag styling.
+*   **Custom Styles:** Custom CSS overrides are in `assets/scss/custom.scss`.
+    *   **Typography:** Removed underlines from the site name and article titles using aggressive CSS overrides.
+    *   **Tag Coloring:** Implemented a Notion-inspired color palette (9 standard colors) for all tags and categories.
+    *   **White Text:** Enforced white text for all tags across both light and dark modes for consistency.
+    *   **Sidebar Anchor:** Fixed an issue where the dark mode toggle would drift vertically by removing `margin-top: auto`.
+*   **Visual Assets:**
+    *   **Featured Images:** Replaced original post images with custom-themed SVGs (`static/img/featured/`) featuring topic-specific white logos on solid colored backgrounds.
+*   **Accessibility:**
+    *   Added a "Skip to content" link for keyboard/screen-reader navigation.
+    *   Ensured all tag/category color combinations meet high-contrast requirements for readability.
+
