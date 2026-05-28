@@ -46,11 +46,11 @@ To develop or build the site locally, you need to have Hugo installed (the Exten
 *   **Theme Overrides:** Local overrides for the Stack theme are located in the `layouts/` directory.
     *   `layouts/partials/sidebar/left.html`: Relocated the dark mode toggle to sit immediately below the navigation links.
     *   `layouts/baseof.html`: Added a hidden "Skip to content" accessibility link and an `id="main-content"` anchor to the main element.
-    *   `layouts/partials/article/components/details.html` & `tags.html`: Modified to support Notion-style dynamic coloring for tags and categories.
+    *   `layouts/partials/article/components/details.html` & `tags.html`: Modified to support coloring for tags and categories.
     *   `layouts/partials/widget/taxonomy.html`: Sidebar tag/category widget updated to match post tag styling.
 *   **Custom Styles:** Custom CSS overrides are in `assets/scss/custom.scss`.
     *   **Typography:** Removed underlines from the site name and article titles using aggressive CSS overrides.
-    *   **Tag Coloring:** Implemented a Notion-inspired color palette (9 standard colors) for all tags and categories.
+    *   **Tag Coloring:** Implemented a color palette (9 standard colors) for all tags and categories.
     *   **White Text:** Enforced white text for all tags across both light and dark modes for consistency.
     *   **Sidebar Anchor:** Fixed an issue where the dark mode toggle would drift vertically by removing `margin-top: auto`.
 *   **Visual Assets:**
