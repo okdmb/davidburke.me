@@ -1,1 +1,55 @@
 {{ partial "search-modal.html" . }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Scroll to Top ---
+        const scrollBtn = document.getElementById('scroll-to-top');
+        if (scrollBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
+            });
+
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // --- Page Transitions (Fade Out) ---
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            // Only handle internal links that aren't anchors/new tabs
+            if (link.hostname === window.location.hostname && 
+                !link.hash && 
+                link.target !== '_blank') {
+                
+                link.addEventListener('click', (e) => {
+                    // Don't intercept if modifier keys are pressed
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+                    e.preventDefault();
+                    const targetUrl = link.href;
+                    document.body.classList.add('fade-out');
+
+                    // Navigate after animation finishes
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 500);
+                });
+            }
+        });
+    });
+
+    // Handle back/forward cache to ensure fade-in runs again
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('fade-out');
+        }
+    });
+</script>
