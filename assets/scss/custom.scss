@@ -7,6 +7,25 @@
     border-bottom: none !important;
 }
 
+/* Site Avatar and Name Animations */
+.site-avatar,
+.site-name {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    &:hover {
+        transform: scale(1.05) rotate(2deg);
+    }
+
+    &:active {
+        transform: scale(0.95);
+        transition-duration: 0.1s;
+    }
+}
+
+.site-name:hover {
+    transform: scale(1.02); /* Less rotation for text */
+}
+
 /* Page Transitions */
 body {
     opacity: 0;
