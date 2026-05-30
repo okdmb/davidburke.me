@@ -73,13 +73,29 @@ body.fade-out {
 
 /* Font Switching */
 :root[data-font="open-dyslexic"] {
-    --base-font-family: 'OpenDyslexic', sans-serif;
-    --article-font-family: 'OpenDyslexic', sans-serif;
+    --base-font-family: 'OpenDyslexic', sans-serif !important;
+    --article-font-family: 'OpenDyslexic', sans-serif !important;
+    
+    body, h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea {
+        font-family: 'OpenDyslexic', sans-serif !important;
+    }
+    
+    code, pre {
+        font-family: 'OpenDyslexic', monospace !important;
+    }
 }
 
 :root[data-font="atkinson"] {
-    --base-font-family: 'Atkinson Hyperlegible', sans-serif;
-    --article-font-family: 'Atkinson Hyperlegible', sans-serif;
+    --base-font-family: 'Atkinson Hyperlegible', sans-serif !important;
+    --article-font-family: 'Atkinson Hyperlegible', sans-serif !important;
+    
+    body, h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea {
+        font-family: 'Atkinson Hyperlegible', sans-serif !important;
+    }
+    
+    code, pre {
+        font-family: 'Atkinson Hyperlegible', monospace !important;
+    }
 }
 
 #font-switcher {
