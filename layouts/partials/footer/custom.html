@@ -2,6 +2,33 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // --- Animations Toggle ---
+        const animationsToggle = document.getElementById('animations-toggle');
+        const setAnimations = (state) => {
+            if (state === 'on') {
+                document.documentElement.dataset.animations = 'on';
+                localStorage.setItem('animations', 'on');
+            } else {
+                delete document.documentElement.dataset.animations;
+                localStorage.setItem('animations', 'off');
+            }
+        };
+
+        // Initialize from localStorage (default to off)
+        const storedAnimations = localStorage.getItem('animations');
+        if (storedAnimations === 'on') {
+            setAnimations('on');
+        } else {
+            setAnimations('off');
+        }
+
+        if (animationsToggle) {
+            animationsToggle.addEventListener('click', () => {
+                const currentState = document.documentElement.dataset.animations === 'on' ? 'off' : 'on';
+                setAnimations(currentState);
+            });
+        }
+
         // --- Scroll to Top ---
         const scrollBtn = document.getElementById('scroll-to-top');
         if (scrollBtn) {
