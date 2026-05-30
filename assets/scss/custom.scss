@@ -73,15 +73,15 @@ body.fade-out {
 
 /* Font Switching */
 :root[data-font="open-dyslexic"] {
-    --base-font-family: 'OpenDyslexic', sans-serif !important;
-    --article-font-family: 'OpenDyslexic', sans-serif !important;
+    --base-font-family: 'OpenDyslexicRegular', sans-serif !important;
+    --article-font-family: 'OpenDyslexicRegular', sans-serif !important;
     
     body, h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea {
-        font-family: 'OpenDyslexic', sans-serif !important;
+        font-family: 'OpenDyslexicRegular', sans-serif !important;
     }
     
     code, pre {
-        font-family: 'OpenDyslexic', monospace !important;
+        font-family: 'OpenDyslexicRegular', monospace !important;
     }
 }
 
