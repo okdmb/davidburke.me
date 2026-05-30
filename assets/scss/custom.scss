@@ -57,6 +57,22 @@ body.fade-out {
     to { opacity: 0; }
 }
 
+@font-face {
+    font-family: 'Fast Sans';
+    src: url('/fonts/Fast_Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fast Mono';
+    src: url('/fonts/Fast_Mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Global Animations Toggle */
 :root:not([data-animations="on"]) {
     *, *::before, *::after {
@@ -95,6 +111,19 @@ body.fade-out {
     
     code, pre {
         font-family: 'Atkinson Hyperlegible', monospace !important;
+    }
+}
+
+:root[data-font="fast-font"] {
+    --base-font-family: 'Fast Sans', sans-serif !important;
+    --article-font-family: 'Fast Sans', sans-serif !important;
+    
+    body, h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea {
+        font-family: 'Fast Sans', sans-serif !important;
+    }
+    
+    code, pre {
+        font-family: 'Fast Mono', monospace !important;
     }
 }
 
