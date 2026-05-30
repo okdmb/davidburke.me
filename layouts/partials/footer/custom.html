@@ -2,6 +2,31 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // --- Font Switcher ---
+        const fontSelect = document.getElementById('font-select');
+        const setFont = (font) => {
+            if (font === 'default') {
+                delete document.documentElement.dataset.font;
+                localStorage.removeItem('font');
+            } else {
+                document.documentElement.dataset.font = font;
+                localStorage.setItem('font', font);
+            }
+        };
+
+        // Initialize from localStorage
+        const storedFont = localStorage.getItem('font');
+        if (storedFont) {
+            setFont(storedFont);
+            if (fontSelect) fontSelect.value = storedFont;
+        }
+
+        if (fontSelect) {
+            fontSelect.addEventListener('change', (e) => {
+                setFont(e.target.value);
+            });
+        }
+
         // --- Animations Toggle ---
         const animationsToggle = document.getElementById('animations-toggle');
         const setAnimations = (state) => {

@@ -71,6 +71,57 @@ body.fade-out {
     }
 }
 
+/* Font Switching */
+:root[data-font="open-dyslexic"] {
+    --base-font-family: 'OpenDyslexic', sans-serif;
+    --article-font-family: 'OpenDyslexic', sans-serif;
+}
+
+:root[data-font="atkinson"] {
+    --base-font-family: 'Atkinson Hyperlegible', sans-serif;
+    --article-font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+#font-switcher {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--menu-icon-separation);
+    color: var(--body-text-color);
+    padding: 10px 0;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        stroke: currentColor;
+        stroke-width: 2;
+        flex-shrink: 0;
+    }
+
+    select {
+        border: 0;
+        background: none !important;
+        color: var(--body-text-color);
+        padding: 0 !important;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1.4rem;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        flex: 1;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        option {
+            color: var(--card-text-color-main);
+            background-color: var(--card-background);
+        }
+    }
+}
+
 #animations-toggle,
 #dark-mode-toggle {
     cursor: pointer;
