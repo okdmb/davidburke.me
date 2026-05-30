@@ -7,6 +7,36 @@
     border-bottom: none !important;
 }
 
+/* Sidebar Underline Animation */
+#main-menu li a {
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    &:hover span::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+#main-menu li.current a span::after {
+    transform: scaleX(1);
+}
+
 /* Page Transitions */
 body {
     opacity: 0;
