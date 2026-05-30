@@ -65,6 +65,10 @@ body.fade-out {
         transition-duration: 0.001s !important;
         scroll-behavior: auto !important;
     }
+
+    #main-menu li a span::after {
+        display: none !important;
+    }
 }
 
 #animations-toggle,
