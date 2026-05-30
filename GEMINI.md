@@ -44,18 +44,21 @@ To develop or build the site locally, you need to have Hugo installed (the Exten
 
 ## Customizations & Overrides
 *   **Theme Overrides:** Local overrides for the Stack theme are located in the `layouts/` directory.
-    *   `layouts/partials/sidebar/left.html`: Relocated the dark mode toggle to sit immediately below the navigation links.
-    *   `layouts/baseof.html`: Added a hidden "Skip to content" accessibility link and an `id="main-content"` anchor to the main element.
-    *   `layouts/partials/article/components/details.html` & `tags.html`: Modified to support coloring for tags and categories.
+    *   `layouts/partials/sidebar/left.html`: Relocated the dark mode toggle, added an animations toggle and a font switcher, and hid the sidebar tagline.
+    *   `layouts/baseof.html`: Added a hidden "Skip to content" accessibility link, an `id="main-content"` anchor, and a new `top-header` for the site tagline.
+    *   `layouts/partials/article/components/details.html` & `tags.html`: Modified to support Notion-style dynamic coloring for tags and categories.
     *   `layouts/partials/widget/taxonomy.html`: Sidebar tag/category widget updated to match post tag styling.
+    *   `layouts/partials/head/custom.html`: Added font imports for OpenDyslexic and Atkinson Hyperlegible.
 *   **Custom Styles:** Custom CSS overrides are in `assets/scss/custom.scss`.
-    *   **Typography:** Removed underlines from the site name and article titles using aggressive CSS overrides.
-    *   **Tag Coloring:** Implemented a color palette (9 standard colors) for all tags and categories.
-    *   **White Text:** Enforced white text for all tags across both light and dark modes for consistency.
-    *   **Sidebar Anchor:** Fixed an issue where the dark mode toggle would drift vertically by removing `margin-top: auto`.
+    *   **Typography:** Removed underlines from the site name and article titles using aggressive CSS overrides. Added font-switching logic.
+    *   **Tagline:** Moved to a new horizontal `top-header` bar with responsive hiding logic.
+    *   **Animations Toggle:** Added global control to enable/disable site animations.
+    *   **Tag Coloring:** Implemented a Notion-inspired color palette (9 standard colors).
+    *   **White Text:** Enforced for all tags across both modes.
 *   **Visual Assets:**
-    *   **Featured Images:** Replaced original post images with custom-themed SVGs (`static/img/featured/`) featuring topic-specific white logos on solid colored backgrounds.
+    *   **Featured Images:** Replaced with custom-themed SVGs (`static/img/featured/`).
 *   **Accessibility:**
-    *   Added a "Skip to content" link for keyboard/screen-reader navigation.
-    *   Ensured all tag/category color combinations meet high-contrast requirements for readability.
+    *   Added a "Skip to content" link.
+    *   Included Atkinson Hyperlegible and OpenDyslexic font options.
+    *   Ensured high-contrast color combinations.
 
