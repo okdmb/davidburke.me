@@ -2,7 +2,7 @@
 title = "Screencasting: How an IT Tool Became the Backbone of Remote Work"
 date = 2026-05-21T10:03:00Z
 image = "/img/featured/screencasting-how-an-it-tool-became-the-backbone-of-remote-work.svg"
-draft = false
+draft = true
 categories = ["Accessibility", "Technology"]
 tags = ["RemoteWork", "UX", "FutureOfWork", "Screencasting", "Documentation"]
 description = "How did screen recording go from a niche IT and accessibility tool to a fundamental feature of the modern digital workplace?"

@@ -2,7 +2,7 @@
 title = "The Rolling Quads and the History of the Curb-Cut Effect"
 date = 2026-05-21T10:10:00Z
 image = "/img/featured/the-rolling-quads-and-the-history-of-the-curb-cut-effect.svg"
-draft = false
+draft = true
 categories = ["Accessibility", "History"]
 tags = ["DisabilityRights", "History", "InclusiveDesign", "CurbCutEffect"]
 description = "Why is it called the 'Curb-Cut Effect'? Let's dive into the history of the disability rights movement in Berkeley, California."

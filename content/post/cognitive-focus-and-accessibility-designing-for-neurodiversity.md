@@ -2,7 +2,7 @@
 title = "Cognitive Focus and Accessibility: Designing for Neurodiversity"
 date = 2026-05-21T10:09:00Z
 image = "/img/featured/cognitive-focus-and-accessibility-designing-for-neurodiversity.svg"
-draft = false
+draft = true
 categories = ["Accessibility", "Guides"]
 tags = ["Neurodiversity", "Focus", "CognitiveAccessibility", "UX"]
 description = "Digital accessibility isn't just about vision and hearing—it's also about cognitive focus. Let's look at how OS tools manage digital distractions."

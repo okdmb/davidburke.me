@@ -2,7 +2,7 @@
 title = "Designing for the Edges: Why Average is the Enemy of Innovation"
 date = 2026-05-21T10:11:00Z
 image = "/img/featured/designing-for-the-edges-why-average-is-the-enemy-of-innovation.svg"
-draft = false
+draft = true
 categories = ["Accessibility", "Design"]
 tags = ["InclusiveDesign", "TechLeadership", "DesignThinking"]
 description = "When we design for the edges, we make things better for the center. Here is why targeting the 'average user' is a mistake."

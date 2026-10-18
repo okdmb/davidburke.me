@@ -1,7 +1,7 @@
 +++
 title = "How to Make Windows More Accessible"
 date = 2026-05-21T22:12:44Z
-draft = false
+draft = true
 categories = ["Accessibility", "Guides"]
 tags = ["Windows", "Inclusion", "Productivity", "Guides"]
 image = "/img/featured/how-to-make-windows-more-accessible.svg"

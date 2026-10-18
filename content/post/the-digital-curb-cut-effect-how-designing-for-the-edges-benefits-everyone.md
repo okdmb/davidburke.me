@@ -2,7 +2,7 @@
 title = "The Digital Curb-Cut Effect: How Designing for the Edges Benefits Everyone"
 date = 2026-05-21T10:00:00Z
 image = "/img/featured/the-digital-curb-cut-effect-how-designing-for-the-edges-benefits-everyone.svg"
-draft = false
+draft = true
 categories = ["Accessibility", "Design"]
 tags = ["InclusiveDesign", "UX", "CurbCutEffect", "CaseStudy"]
 description = "Did you know that closed captions weren’t originally designed for watching videos on a noisy train? Explore the digital curb-cut effect through real-world case studies."

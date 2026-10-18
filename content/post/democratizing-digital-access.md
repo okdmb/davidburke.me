@@ -2,7 +2,7 @@
 title = "Democratizing Digital Access"
 date = 2026-05-21T11:00:00Z
 image = "/img/featured/democratizing-digital-access.svg"
-draft = false
+draft = true
 categories = ["Accessibility", "Technology"]
 tags = ["OpenSource", "OpenHardware", "InclusiveDesign", "Innovation", "Accessibility"]
 description = "Exploring how open-source software and open hardware projects are democratizing accessibility and empowering global communities."

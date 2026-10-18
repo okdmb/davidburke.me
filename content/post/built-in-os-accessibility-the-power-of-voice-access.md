@@ -2,7 +2,7 @@
 title = "Built-in OS Accessibility: The Power of Voice Access"
 date = 2026-05-21T10:08:00Z
 image = "/img/featured/built-in-os-accessibility-the-power-of-voice-access.svg"
-draft = false
+draft = true
 categories = ["Accessibility", "Guides"]
 tags = ["VoiceTech", "Productivity", "HandsFree", "Windows11"]
 description = "Did you know Windows 11 Voice Access lets you control your entire PC and author text using only your voice? Here is why it matters."
